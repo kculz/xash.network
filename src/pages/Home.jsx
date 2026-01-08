@@ -81,7 +81,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen ">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[#0B3C5D] via-[#0B3C5D] to-[#1F6AE1] text-white overflow-hidden">
         {/* Animated Background Elements */}
@@ -166,7 +166,7 @@ const Home = () => {
       </section>
 
       {/* Services Section with Grayscale Background */}
-      <section className="py-20 bg-gray-50 relative">
+      <section className="py-20  relative">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <div className="inline-block bg-white/80 backdrop-blur-sm px-6 py-2 rounded-full mb-6 shadow-sm">
