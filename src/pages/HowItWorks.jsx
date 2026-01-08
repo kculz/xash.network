@@ -116,7 +116,7 @@ const HowItWorks = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
+      {/* Hero Section - Kept as is */}
       <section className="relative bg-gradient-to-br from-[#0B3C5D] via-[#0B3C5D] to-[#1F6AE1] text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden opacity-30">
           <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-[#1F6AE1] rounded-full blur-3xl animate-pulse"></div>
@@ -150,11 +150,11 @@ const HowItWorks = () => {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-28 bg-white">
+      {/* Services Section - Changed to grayscale */}
+      <section className="py-28 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <div className="inline-block bg-[#F5F7FA] px-6 py-2 rounded-full mb-6">
+            <div className="inline-block bg-white/80 backdrop-blur-sm px-6 py-2 rounded-full mb-6 shadow-sm">
               <span className="text-sm font-semibold text-[#0B3C5D]">Our Services</span>
             </div>
             <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">Step-by-Step Process</h2>
@@ -172,7 +172,7 @@ const HowItWorks = () => {
                     <img 
                       src={service.image} 
                       alt={service.title}
-                      className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-[500px] object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-[#0B3C5D]/30 to-transparent"></div>
                     
@@ -207,12 +207,12 @@ const HowItWorks = () => {
         </div>
       </section>
 
-      {/* Getting Started */}
-      <section className="py-28 bg-gradient-to-br from-[#F5F7FA] to-white">
+      {/* Getting Started - Changed to white */}
+      <section className="py-28 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-20">
-              <div className="inline-block bg-white px-6 py-2 rounded-full mb-6 shadow-sm">
+              <div className="inline-block bg-gray-50 px-6 py-2 rounded-full mb-6">
                 <span className="text-sm font-semibold text-[#0B3C5D]">Quick Start</span>
               </div>
               <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">Getting Started is Easy</h2>
@@ -246,11 +246,11 @@ const HowItWorks = () => {
         </div>
       </section>
 
-      {/* Benefits Section with Images */}
-      <section className="py-28 bg-white">
+      {/* Benefits Section - Changed to grayscale */}
+      <section className="py-28 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <div className="inline-block bg-[#F5F7FA] px-6 py-2 rounded-full mb-6">
+            <div className="inline-block bg-white/80 backdrop-blur-sm px-6 py-2 rounded-full mb-6 shadow-sm">
               <span className="text-sm font-semibold text-[#0B3C5D]">Who Benefits</span>
             </div>
             <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">Solutions for Everyone</h2>
@@ -261,13 +261,13 @@ const HowItWorks = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {benefits.map((benefit, index) => (
-              <div key={index} className="group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+              <div key={index} className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-200">
                 {/* Image */}
                 <div className="relative h-64 overflow-hidden">
                   <img 
                     src={benefit.image} 
                     alt={benefit.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0B3C5D]/80 to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6">
@@ -294,12 +294,12 @@ const HowItWorks = () => {
         </div>
       </section>
 
-      {/* Key Stats */}
-      <section className="py-28 bg-gradient-to-br from-[#F5F7FA] to-white">
+      {/* Key Stats - Changed to white */}
+      <section className="py-28 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-block bg-white px-6 py-2 rounded-full mb-6 shadow-sm">
+              <div className="inline-block bg-gray-50 px-6 py-2 rounded-full mb-6">
                 <span className="text-sm font-semibold text-[#0B3C5D]">Our Performance</span>
               </div>
               <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">By The Numbers</h2>
@@ -311,7 +311,7 @@ const HowItWorks = () => {
                 { value: '24/7', label: 'Support Available', desc: 'Round-the-clock assistance' },
                 { value: '99.9%', label: 'System Uptime', desc: 'Reliable service always' }
               ].map((stat, index) => (
-                <div key={index} className="text-center bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <div key={index} className="text-center bg-gray-50 rounded-3xl p-10 shadow-lg hover:shadow-xl transition-all duration-500">
                   <div className="text-6xl font-bold bg-gradient-to-r from-[#0B3C5D] to-[#1F6AE1] bg-clip-text  mb-4">
                     {stat.value}
                   </div>
@@ -324,12 +324,12 @@ const HowItWorks = () => {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-28 bg-white">
+      {/* FAQ - Changed to grayscale */}
+      <section className="py-28 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-block bg-[#F5F7FA] px-6 py-2 rounded-full mb-6">
+              <div className="inline-block bg-white/80 backdrop-blur-sm px-6 py-2 rounded-full mb-6 shadow-sm">
                 <span className="text-sm font-semibold text-[#0B3C5D]">FAQ</span>
               </div>
               <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">
@@ -340,9 +340,9 @@ const HowItWorks = () => {
             
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div key={index} className="bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:border-[#1F6AE1] transition-colors">
+                <div key={index} className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-[#1F6AE1] transition-colors">
                   <button
-                    className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-[#F5F7FA] transition-colors"
+                    className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
                   >
                     <span className="font-bold text-xl text-[#1A1A1A] pr-4">
