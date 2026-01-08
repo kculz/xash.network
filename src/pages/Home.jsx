@@ -107,7 +107,7 @@ const Home = () => {
               </h1>
 
               <p className="text-xl text-gray-200 leading-relaxed max-w-xl">
-                Advanced POS systems, instant bill payments, and comprehensive financial software for businesses and individuals across Zimbabwe.
+                Advanced POS systems, instant bill payments, and comprehensive financial software for businesses and individuals around the Globe
               </p>
 
               {/* Stats */}
@@ -249,7 +249,7 @@ const Home = () => {
               <div className="inline-block bg-white px-6 py-2 rounded-full mb-6 shadow-sm">
                 <span className="text-sm font-semibold text-[#0B3C5D]">Our Advantages</span>
               </div>
-              <h2 className="text-4xl font-bold text-[#0B3C5D] mb-6">Why Choose Xash.network</h2>
+              <h2 className="text-4xl font-bold text-[#0B3C5D] mb-6">Why Choose Xash Solutions</h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Built for efficiency, reliability, and growth with enterprise-grade features.
               </p>
@@ -407,7 +407,7 @@ const Home = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-              Join thousands of successful businesses using Xash.network for their financial needs
+              Join thousands of successful businesses usingXash Solutions for their financial needs
             </p>
           </div>
         </div>

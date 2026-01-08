@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Menu, X, ChevronDown, CreditCard, Smartphone, BarChart3, DollarSign } from 'lucide-react';
+import logo from "../../assets/logos/xash_logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,15 +46,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-11 h-11 bg-gradient-to-br from-[#0B3C5D] to-[#1F6AE1] rounded-xl flex items-center justify-center shadow-lg shadow-[#0B3C5D]/20">
-              <span className="text-white font-bold text-xl">X</span>
-            </div>
-            <div>
-              <h1 className="text-xl font-bold bg-gradient-to-r from-[#0B3C5D] to-[#1F6AE1] bg-clip-text ">
-                Xash.network
-              </h1>
-              <p className="text-xs text-gray-500 font-medium">Financial Solutions</p>
-            </div>
+            <img src={logo} alt="Xash Logo" className='w-20' />
           </div>
 
           {/* Desktop Navigation */}

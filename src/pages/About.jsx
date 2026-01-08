@@ -61,7 +61,7 @@ const About = () => {
               </div>
               
               <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                About Xash.network
+                AboutXash Solutions
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">

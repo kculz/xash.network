@@ -12,6 +12,7 @@ import {
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
+import logo from "../../assets/logos/logo.png";
 
 const Footer = () => {
   const quickLinks = [
@@ -25,14 +26,13 @@ const Footer = () => {
   const legalLinks = [
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
-    { name: 'Compliance Statement', href: '/compliance' },
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
+    { icon: Facebook, href: 'https://www.facebook.com/XashPay', label: 'Facebook' },
+    { icon: Twitter, href: 'https://x.com/XashPay', label: 'Twitter' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/xashpay', label: 'LinkedIn' },
+    { icon: Instagram, href: 'https://www.instagram.com/xashpay/', label: 'Instagram' },
   ];
 
   return (
@@ -46,24 +46,13 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-white to-gray-100 rounded-xl flex items-center justify-center shadow-lg">
-                <span className="text-[#0B3C5D] font-bold text-2xl">X</span>
-              </div>
-              <div>
-                <h2 className="text-xl font-bold">Xash.network</h2>
-                <p className="text-xs text-gray-300">Financial Solutions</p>
-              </div>
+              <img src={logo} alt="Xash Logo" className='w-20' />
             </div>
             <p className="text-gray-300 text-sm leading-relaxed mb-6">
-              Simplifying bill payments and POS solutions for businesses and individuals across Zimbabwe.
+              Simplifying bill payments and POS solutions for businesses and individuals across the Globe.
             </p>
             <div className="space-y-4">
-              <div className="flex items-start space-x-3 group">
-                <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#F5B700]/20 transition-all">
-                  <MapPin className="w-4 h-4 text-[#F5B700]" />
-                </div>
-                <span className="text-gray-300 text-sm leading-relaxed">63 Embassy Building, Aerodrome Rd, Mutare, Zimbabwe</span>
-              </div>
+              
               <div className="flex items-center space-x-3 group">
                 <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#F5B700]/20 transition-all">
                   <Phone className="w-4 h-4 text-[#F5B700]" />
@@ -162,10 +151,10 @@ const Footer = () => {
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Xash.network. All rights reserved.
+              © {new Date().getFullYear()}Xash Solutions. All rights reserved.
             </p>
             <p className="text-gray-400 text-xs">
-              Designed & developed with care in Zimbabwe
+              
             </p>
           </div>
         </div>

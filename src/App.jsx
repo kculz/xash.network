@@ -11,6 +11,8 @@ import PosSolutions from './pages/PosSolutions';
 import BillPayments from './pages/BillPayments';
 import FinancialSoftware from './pages/FinancialSoftware';
 import Contact from './pages/Contact';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsConditions from './pages/TermsConditions';
 
 // Scroll to top component
 const ScrollToTop = () => {
@@ -41,6 +43,8 @@ const AppContent = () => {
           <Route path="/how-it-works" element={<HowItWorks/>} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsConditions />} />
         </Routes>
       </main>
       <Footer />
