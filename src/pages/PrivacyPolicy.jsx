@@ -1,5 +1,6 @@
 import React from 'react';
 import { Shield, Lock, Eye, Users, Globe, Clock, CheckCircle, ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet';
 
 const PrivacyPolicy = () => {
   const sections = [
@@ -80,6 +81,16 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="min-h-screen bg-white">
+        <Helmet>
+            <title>Privacy Policy - Xash Solutions Data Protection & Security</title>
+            <meta name="description" content="Learn how Xash Solutions protects your privacy and ensures the security of your personal data. Read our comprehensive privacy policy." />
+            <meta property="og:title" content="Privacy Policy - Xash Solutions Data Protection & Security" />
+            <meta property="og:description" content="Learn how Xash Solutions protects your privacy and ensures the security of your personal data. Read our comprehensive privacy policy." />
+            <meta property="og:url" content="https://xash.network/privacy" />
+            <meta property="og:type" content="website" />
+            <meta property="og:image" content="https://xash.network/images/logo.jpg" />
+            <link rel="canonical" href="https://xash.network/privacy" />
+            </Helmet>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[#0B3C5D] via-[#0B3C5D] to-[#1F6AE1] text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden opacity-30">

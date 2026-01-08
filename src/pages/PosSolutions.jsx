@@ -21,6 +21,7 @@ import {
   ChevronDown,
   Sparkles
 } from 'lucide-react';
+import { Helmet } from 'react-helmet';
 
 const PosSolutions = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -145,6 +146,16 @@ const PosSolutions = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>POS Software & Integration - Xash Solutions</title>
+        <meta name="description" content="Advanced POS systems with seamless integration for processing airtime, bill payments, and mobile data bundles. Earn commissions on every transaction." />
+        <meta property="og:title" content="POS Software & Integration - Xash Solutions" />
+        <meta property="og:description" content="Advanced POS systems with seamless integration for processing airtime, bill payments, and mobile data bundles. Earn commissions on every transaction." />
+        <meta property="og:url" content="https://xash.network/pos" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://xash.network/images/logo.jpg" />
+        <link rel="canonical" href="https://xash.network/pos" />
+      </Helmet>
       {/* Hero Section - Kept as is with white background */}
       <section className="relative bg-gradient-to-br from-[#0B3C5D] via-[#0B3C5D] to-[#1F6AE1] text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden opacity-30">

@@ -12,6 +12,7 @@ import {
   ChevronDown,
   Sparkles
 } from 'lucide-react';
+import { Helmet } from 'react-helmet';
 
 const HowItWorks = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -116,6 +117,16 @@ const HowItWorks = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>How It Works - Get Started with Xash Solutions Financial Solutions</title>
+        <meta name="description" content="Simple, transparent processes for all our financial solutions. Get started quickly and start earning or saving today." />
+        <meta property="og:title" content="How It Works - Get Started with Xash Solutions Financial Solutions" />
+        <meta property="og:description" content="Simple, transparent processes for all our financial solutions. Get started quickly and start earning or saving today." />
+        <meta property="og:url" content="https://xash.network/how-it-works" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://xash.network/images/logo.jpg" />
+        <link rel="canonical" href="https://xash.network/how-it-works" />
+      </Helmet>
       {/* Hero Section - Kept as is */}
       <section className="relative bg-gradient-to-br from-[#0B3C5D] via-[#0B3C5D] to-[#1F6AE1] text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden opacity-30">

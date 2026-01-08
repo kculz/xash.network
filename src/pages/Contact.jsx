@@ -8,6 +8,7 @@ import {
   ArrowRight,
   MessageCircle
 } from 'lucide-react';
+import { Helmet } from 'react-helmet';
 
 const Contact = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -57,6 +58,16 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet >
+        <title>Contact Us - Xash.network Customer Support</title>
+        <meta name="description" content="Get in touch with Xash Solutions customer support for POS systems, bill payments, and financial software inquiries. We're here to help!" />
+        <meta property="og:title" content="Contact Us - Xash Solutions Customer Support" />
+        <meta property="og:description" content="Get in touch with Xash Solutions customer support for POS systems, bill payments, and financial software inquiries. We're here to help!" />
+        <meta property="og:url" content="https://xash.network/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://xash.network/images/logo.jpg" />
+        <link rel="canonical" href="https://xash.network/contact" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative bg-[#0B3C5D] text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden opacity-10">
@@ -319,25 +330,17 @@ const Contact = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-[#0B3C5D] text-white">
+      <section className="py-16 bg-[#0B3C5D] text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-10">
+            <p className="text-xl text-gray-300 mb-2">
               Whether you need POS solutions, bill payments, or financial software, we have the right solution for you.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-[#1F6AE1] text-white px-10 py-5 rounded-lg hover:bg-[#1558B8] transition-all duration-300 font-semibold text-lg flex items-center justify-center group">
-                Schedule Demo
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="bg-transparent border-2 border-white text-white px-10 py-5 rounded-lg hover:bg-white hover:text-[#0B3C5D] transition-all duration-300 font-semibold text-lg">
-                Start Free Trial
-              </button>
-            </div>
+           
           </div>
         </div>
       </section>

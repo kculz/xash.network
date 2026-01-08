@@ -16,6 +16,7 @@ import {
   Sparkles,
   Play
 } from 'lucide-react';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
   const services = [
@@ -82,6 +83,16 @@ const Home = () => {
 
   return (
     <div className="min-h-screen ">
+      <Helmet>
+        <title>Xash Solutions - Financial Solutions for Zimbabwe & Africa</title>
+        <meta name="description" content="Advanced POS systems, instant bill payments, and comprehensive financial software for businesses and individuals across Zimbabwe." />
+        <meta property="og:title" content="Xash Solutions - Financial Solutions for Zimbabwe & Africa" />
+        <meta property="og:description" content="Advanced POS systems, instant bill payments, and comprehensive financial software for businesses and individuals across Zimbabwe." />
+        <meta property="og:url" content="https://xash.network/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://xash.network/images/logo.jpg" />
+        <link rel="canonical" href="https://xash.network/" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[#0B3C5D] via-[#0B3C5D] to-[#1F6AE1] text-white overflow-hidden">
         {/* Animated Background Elements */}

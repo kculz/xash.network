@@ -1,5 +1,6 @@
 import React from 'react';
 import { FileText, Scale, CheckCircle, AlertCircle, Clock, Shield, Users, BookOpen, ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet';
 
 const TermsConditions = () => {
   const sections = [
@@ -96,6 +97,16 @@ const TermsConditions = () => {
 
   return (
     <div className="min-h-screen bg-white">
+        <Helmet>
+            <title>Terms & Conditions - Xash Solutions Legal Agreement</title>
+            <meta name="description" content="Read Xash Solutions's terms and conditions. Understand the legal agreement governing your use of our financial services and solutions." />
+            <meta property="og:title" content="Terms & Conditions - Xash Solutions Legal Agreement" />
+            <meta property="og:description" content="Read Xash Solutions's terms and conditions. Understand the legal agreement governing your use of our financial services and solutions." />
+            <meta property="og:url" content="https://xash.network/terms-conditions" />
+            <meta property="og:type" content="website" />
+            <meta property="og:image" content="https://xash.network/images/logo.jpg" />
+            <link rel="canonical" href="https://xash.network/terms" />
+            </Helmet>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[#0B3C5D] via-[#0B3C5D] to-[#1F6AE1] text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden opacity-30">

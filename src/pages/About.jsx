@@ -12,6 +12,7 @@ import {
   Phone,
   ArrowRight
 } from 'lucide-react';
+import { Helmet } from 'react-helmet';
 
 const About = () => {
   const values = [
@@ -37,15 +38,69 @@ const About = () => {
     }
   ];
 
-  const milestones = [
-    { year: '2018', title: 'Company Founded', desc: 'Xash.network established' },
-    { year: '2019', title: 'Platform Launch', desc: 'Launched POS platform' },
-    { year: '2021', title: 'Multi-Country', desc: 'Expanded across Africa' },
-    { year: '2023', title: '10K+ Agents', desc: 'Reached major milestone' }
-  ];
+const milestones = [
+  { 
+    year: '2018', 
+    title: 'Company Founded', 
+    desc: 'Xash.network was established in Harare, Zimbabwe with a vision to simplify financial transactions across Africa.',
+    icon: '🏢'
+  },
+  { 
+    year: '2019', 
+    title: 'MVP Launch', 
+    desc: 'Launched our first POS platform in Harare with 50 pilot merchants. Processed $500K in first-year transactions.',
+    icon: '🚀'
+  },
+  { 
+    year: '2020', 
+    title: 'Bill Payments Integration', 
+    desc: 'Integrated electricity, DSTV, and water bill payments. Expanded to 500+ agents nationwide.',
+    icon: '⚡'
+  },
+  { 
+    year: '2021', 
+    title: 'Regional Expansion', 
+    desc: 'Expanded operations to Zambia and Botswana. Launched multi-currency support.',
+    icon: '🌍'
+  },
+  { 
+    year: '2022', 
+    title: 'Mobile App Launch', 
+    desc: 'Released Android & iOS apps. Introduced real-time analytics and reporting dashboard.',
+    icon: '📱'
+  },
+  { 
+    year: '2023', 
+    title: '10K+ Agent Network', 
+    desc: 'Reached milestone of 10,000+ registered agents. Processed over $50M in total transactions.',
+    icon: '📊'
+  },
+  { 
+    year: '2024', 
+    title: 'Financial Software Suite', 
+    desc: 'Launched comprehensive business financial software with API integration for enterprises.',
+    icon: '💼'
+  },
+  { 
+    year: '2025', 
+    title: 'Expansion & Innovation', 
+    desc: 'Planning expansion to 3 new African countries. Developing AI-powered financial insights.',
+    icon: '🚀'
+  }
+];
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>About Us - Xash Solutions Financial Solutions Company</title>
+        <meta name="description" content="Learn about Xash Solutions - a leading provider of financial solutions including POS systems, bill payments, and business software for Zimbabwe and Africa." />
+        <meta property="og:title" content="About Us - Xash Solutions Financial Solutions Company" />
+        <meta property="og:description" content="Learn about Xash Solutions - a leading provider of financial solutions including POS systems, bill payments, and business software for Zimbabwe and Africa." />
+        <meta property="og:url" content="https://xash.network/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://xash.network/images/logo.jpg" />
+        <link rel="canonical" href="https://xash.network/about" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative bg-[#0B3C5D] text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden opacity-10">

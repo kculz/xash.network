@@ -19,6 +19,7 @@ import {
   Star,
   Sparkles
 } from 'lucide-react';
+import { Helmet } from 'react-helmet';
 
 const BillPayments = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -151,6 +152,16 @@ const BillPayments = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Bill Payments - Pay ZESA, DSTV, Water & Mobile Bills - Xash Solutions</title>
+        <meta name="description" content="Instant bill payments for electricity (ZESA), DSTV, water, airtime, and mobile data bundles. 50+ supported billers with 24/7 availability." />
+        <meta property="og:title" content="Bill Payments - Pay ZESA, DSTV, Water & Mobile Bills - Xash Solutions" />
+        <meta property="og:description" content="Instant bill payments for electricity (ZESA), DSTV, water, airtime, and mobile data bundles. 50+ supported billers with 24/7 availability." />
+        <meta property="og:url" content="https://xash.network/bill-payments" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://xash.network/images/logo.jpg" />
+        <link rel="canonical" href="https://xash.network/bill-payments" />
+      </Helmet>
       {/* Hero Section - Kept as is */}
       <section className="relative bg-gradient-to-br from-[#0B3C5D] via-[#0B3C5D] to-[#1F6AE1] text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden opacity-30">
