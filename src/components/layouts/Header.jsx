@@ -1,9 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Menu, X, ChevronDown, CreditCard, Smartphone, BarChart3, DollarSign } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [solutionsHovered, setSolutionsHovered] = useState(false);
+  const dropdownRef = useRef(null);
+  const buttonRef = useRef(null);
+
+  // Handle clicking outside to close dropdown
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target) && 
+          buttonRef.current && !buttonRef.current.contains(event.target)) {
+        setSolutionsHovered(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   const navItems = [
     { name: 'Home', href: '/' },
@@ -41,16 +59,24 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
-              <div key={item.name} className="relative group">
+              <div key={item.name} className="relative">
                 {item.dropdown ? (
                   <>
                     <button 
+                      ref={buttonRef}
+                      onMouseEnter={() => setSolutionsHovered(true)}
+                      onMouseLeave={() => setSolutionsHovered(false)}
                       className="flex items-center text-[#1A1A1A] hover:text-[#0B3C5D] transition-all duration-300 font-medium px-4 py-2.5 rounded-xl hover:bg-[#F5F7FA]"
                     >
                       {item.name}
-                      <ChevronDown className="ml-1.5 w-4 h-4 transition-transform group-hover:rotate-180 duration-300" />
+                      <ChevronDown className={`ml-1.5 w-4 h-4 transition-transform duration-300 ${solutionsHovered ? 'rotate-180' : ''}`} />
                     </button>
-                    <div className="absolute left-0 mt-2 w-72 bg-white rounded-2xl shadow-2xl opacity-0  group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100 overflow-hidden">
+                    <div 
+                      ref={dropdownRef}
+                      onMouseEnter={() => setSolutionsHovered(true)}
+                      onMouseLeave={() => setSolutionsHovered(false)}
+                      className={`absolute left-0 mt-2 w-72 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-300 ${solutionsHovered ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
+                    >
                       {item.dropdown.map((subItem, index) => (
                         <a
                           key={subItem.name}
