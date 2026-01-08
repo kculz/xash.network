@@ -145,7 +145,7 @@ const PosSolutions = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
+      {/* Hero Section - Kept as is with white background */}
       <section className="relative bg-gradient-to-br from-[#0B3C5D] via-[#0B3C5D] to-[#1F6AE1] text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden opacity-30">
           <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-[#1F6AE1] rounded-full blur-3xl animate-pulse"></div>
@@ -225,11 +225,11 @@ const PosSolutions = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-28 bg-white">
+      {/* Features Section - Changed to grayscale */}
+      <section className="py-28 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <div className="inline-block bg-[#F5F7FA] px-6 py-2 rounded-full mb-6">
+            <div className="inline-block bg-white/80 backdrop-blur-sm px-6 py-2 rounded-full mb-6 shadow-sm">
               <span className="text-sm font-semibold text-[#0B3C5D]">Powerful Features</span>
             </div>
             <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">Everything You Need</h2>
@@ -240,7 +240,7 @@ const PosSolutions = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {features.map((feature, index) => (
-              <div key={index} className="group bg-white rounded-3xl p-10 hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-transparent relative overflow-hidden">
+              <div key={index} className="group bg-white rounded-3xl p-10 hover:shadow-2xl transition-all duration-500 border border-gray-200 hover:border-transparent relative overflow-hidden">
                 <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
                 
                 <div className="relative z-10">
@@ -257,11 +257,11 @@ const PosSolutions = () => {
         </div>
       </section>
 
-      {/* Benefits Section with Images */}
-      <section className="py-28 bg-gradient-to-br from-[#F5F7FA] to-white">
+      {/* Benefits Section with Images - Changed to white */}
+      <section className="py-28 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <div className="inline-block bg-white px-6 py-2 rounded-full mb-6 shadow-sm">
+            <div className="inline-block bg-gray-50 px-6 py-2 rounded-full mb-6">
               <span className="text-sm font-semibold text-[#0B3C5D]">Solutions For Everyone</span>
             </div>
             <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">Who Benefits</h2>
@@ -279,7 +279,7 @@ const PosSolutions = () => {
                     <img 
                       src={benefit.image} 
                       alt={benefit.title}
-                      className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-[500px] object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-br from-[#0B3C5D]/30 to-transparent"></div>
                     
@@ -310,19 +310,19 @@ const PosSolutions = () => {
         </div>
       </section>
 
-      {/* Commission Structure */}
-      <section className="py-28 bg-white">
+      {/* Commission Structure - Changed to grayscale */}
+      <section className="py-28 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-block bg-[#F5F7FA] px-6 py-2 rounded-full mb-6">
+              <div className="inline-block bg-white/80 backdrop-blur-sm px-6 py-2 rounded-full mb-6 shadow-sm">
                 <span className="text-sm font-semibold text-[#0B3C5D]">Earnings</span>
               </div>
               <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">Commission Structure</h2>
               <p className="text-xl text-gray-600">Competitive rates across all services</p>
             </div>
 
-            <div className="bg-gradient-to-br from-[#F5F7FA] to-white rounded-3xl p-12 border-2 border-gray-100 shadow-xl">
+            <div className="bg-white rounded-3xl p-12 border border-gray-200 shadow-xl">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
                 <div className="text-center group">
                   <div className="w-20 h-20 bg-gradient-to-br from-[#0B3C5D] to-[#1F6AE1] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
@@ -365,11 +365,11 @@ const PosSolutions = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-28 bg-gradient-to-br from-[#F5F7FA] to-white">
+      {/* Testimonials - Changed to white */}
+      <section className="py-28 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <div className="inline-block bg-white px-6 py-2 rounded-full mb-6 shadow-sm">
+            <div className="inline-block bg-gray-50 px-6 py-2 rounded-full mb-6">
               <span className="text-sm font-semibold text-[#0B3C5D]">Success Stories</span>
             </div>
             <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">What Our Clients Say</h2>
@@ -378,7 +378,7 @@ const PosSolutions = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+              <div key={index} className="bg-gray-50 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-200">
                 <div className="p-10">
                   <div className="flex mb-6">
                     {[...Array(5)].map((_, i) => (
@@ -409,12 +409,12 @@ const PosSolutions = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-28 bg-white">
+      {/* FAQ Section - Changed to grayscale */}
+      <section className="py-28 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-block bg-[#F5F7FA] px-6 py-2 rounded-full mb-6">
+              <div className="inline-block bg-white/80 backdrop-blur-sm px-6 py-2 rounded-full mb-6 shadow-sm">
                 <span className="text-sm font-semibold text-[#0B3C5D]">FAQ</span>
               </div>
               <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">
@@ -425,9 +425,9 @@ const PosSolutions = () => {
             
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div key={index} className="bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:border-[#1F6AE1] transition-colors">
+                <div key={index} className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-[#1F6AE1] transition-colors">
                   <button
-                    className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-[#F5F7FA] transition-colors"
+                    className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
                   >
                     <span className="font-bold text-xl text-[#1A1A1A] pr-4">
