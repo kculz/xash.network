@@ -17,7 +17,13 @@ import {
   Building,
   Globe,
   Clock,
-  Layers
+  Layers,
+  Rocket,
+  Bolt,
+  Smartphone,
+  BarChart,
+  Briefcase,
+  Flag
 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
 
@@ -54,49 +60,57 @@ const About = () => {
       year: '2018', 
       title: 'Company Founded', 
       desc: 'Xash.network was established in Harare, Zimbabwe with a vision to simplify financial transactions across Africa.',
-      icon: '🏢'
+      icon: Building,
+      iconColor: 'text-[#0B3C5D]'
     },
     { 
       year: '2019', 
       title: 'MVP Launch', 
       desc: 'Launched our first POS platform in Harare with 50 pilot merchants. Processed $500K in first-year transactions.',
-      icon: '🚀'
+      icon: Rocket,
+      iconColor: 'text-[#1F6AE1]'
     },
     { 
       year: '2020', 
       title: 'Bill Payments Integration', 
       desc: 'Integrated electricity, DSTV, and water bill payments. Expanded to 500+ agents nationwide.',
-      icon: '⚡'
+      icon: Bolt,
+      iconColor: 'text-[#F5B700]'
     },
     { 
       year: '2021', 
       title: 'Regional Expansion', 
       desc: 'Expanded operations to Zambia and Botswana. Launched multi-currency support.',
-      icon: '🌍'
+      icon: Globe,
+      iconColor: 'text-[#0B3C5D]'
     },
     { 
       year: '2022', 
       title: 'Mobile App Launch', 
       desc: 'Released Android & iOS apps. Introduced real-time analytics and reporting dashboard.',
-      icon: '📱'
+      icon: Smartphone,
+      iconColor: 'text-[#1F6AE1]'
     },
     { 
       year: '2023', 
       title: '10K+ Agent Network', 
       desc: 'Reached milestone of 10,000+ registered agents. Processed over $50M in total transactions.',
-      icon: '📊'
+      icon: Users,
+      iconColor: 'text-[#F5B700]'
     },
     { 
       year: '2024', 
       title: 'Financial Software Suite', 
       desc: 'Launched comprehensive business financial software with API integration for enterprises.',
-      icon: '💼'
+      icon: Briefcase,
+      iconColor: 'text-[#0B3C5D]'
     },
     { 
       year: '2025', 
       title: 'Expansion & Innovation', 
       desc: 'Planning expansion to 3 new African countries. Developing AI-powered financial insights.',
-      icon: '🚀'
+      icon: TrendingUp,
+      iconColor: 'text-[#1F6AE1]'
     }
   ];
 
@@ -314,14 +328,19 @@ const About = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-            {milestones.map((milestone, index) => (
-              <div key={index} className="group bg-[#F5F7FA] rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-[#1F6AE1]">
-                <div className="text-5xl mb-6 group-hover:scale-110 transition-transform">{milestone.icon}</div>
-                <div className="text-3xl font-bold text-[#F5B700] mb-3">{milestone.year}</div>
-                <h3 className="text-xl font-bold text-[#0B3C5D] mb-4 group-hover:text-[#1F6AE1] transition-colors">{milestone.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{milestone.desc}</p>
-              </div>
-            ))}
+            {milestones.map((milestone, index) => {
+              const Icon = milestone.icon;
+              return (
+                <div key={index} className="group bg-[#F5F7FA] rounded-3xl p-8 hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-[#1F6AE1]">
+                  <div className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform flex items-center justify-center">
+                    <Icon className={`w-full h-full ${milestone.iconColor}`} />
+                  </div>
+                  <div className="text-3xl font-bold text-[#F5B700] mb-3">{milestone.year}</div>
+                  <h3 className="text-xl font-bold text-[#0B3C5D] mb-4 group-hover:text-[#1F6AE1] transition-colors">{milestone.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{milestone.desc}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
