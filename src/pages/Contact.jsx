@@ -4,43 +4,35 @@ import {
   Phone,
   MapPin,
   Clock,
-  Send,
-  CheckCircle,
   ChevronDown,
-  ArrowRight
+  ArrowRight,
+  MessageCircle
 } from 'lucide-react';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  });
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
   const [openFaq, setOpenFaq] = useState(null);
 
   const contactMethods = [
     {
       icon: Phone,
-      title: 'Phone',
+      title: 'Phone Support',
       details: '+263 78 123 4567',
-      description: 'Mon-Fri: 8AM-5PM'
+      description: 'Mon-Fri: 8AM-5PM',
+      link: 'tel:+263781234567'
     },
     {
       icon: Mail,
-      title: 'Email',
+      title: 'Email Us',
       details: 'info@xash.network',
-      description: 'Response within 24 hours'
+      description: 'Response within 24 hours',
+      link: 'mailto:info@xash.network'
     },
     {
-      icon: MapPin,
-      title: 'Office',
-      details: 'Mutare, Zimbabwe',
-      description: 'Visit by appointment'
+      icon: MessageCircle,
+      title: 'WhatsApp',
+      details: '+263 77 987 6543',
+      description: '24/7 instant messaging',
+      link: 'https://wa.me/263779876543'
     }
   ];
 
@@ -63,35 +55,6 @@ const Contact = () => {
     }
   ];
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = () => {
-    setIsLoading(true);
-    
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
-      setIsSubmitted(true);
-      setIsLoading(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
-      });
-      
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
-    }, 1500);
-  };
-
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -102,31 +65,42 @@ const Contact = () => {
         </div>
 
         <div className="container mx-auto px-4 py-24 lg:py-32 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Get in Touch
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Have questions about our financial solutions? Our team is here to help you succeed.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                Get in Touch
+              </h1>
+              <p className="text-xl text-gray-300 mb-8">
+                Have questions about our financial solutions? Our team is here to help you succeed.
+              </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
-              <div className="text-center p-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-xl">
-                <div className="text-3xl font-bold text-[#F5B700]">24/7</div>
-                <div className="text-sm text-gray-300">Support</div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-center p-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-xl">
+                  <div className="text-3xl font-bold text-[#F5B700]">24/7</div>
+                  <div className="text-sm text-gray-300">Support</div>
+                </div>
+                <div className="text-center p-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-xl">
+                  <div className="text-3xl font-bold text-[#F5B700]">&lt;24h</div>
+                  <div className="text-sm text-gray-300">Response</div>
+                </div>
+                <div className="text-center p-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-xl">
+                  <div className="text-3xl font-bold text-[#F5B700]">98%</div>
+                  <div className="text-sm text-gray-300">Satisfaction</div>
+                </div>
+                <div className="text-center p-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-xl">
+                  <div className="text-3xl font-bold text-[#F5B700]">3+</div>
+                  <div className="text-sm text-gray-300">Countries</div>
+                </div>
               </div>
-              <div className="text-center p-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-xl">
-                <div className="text-3xl font-bold text-[#F5B700]">&lt;24h</div>
-                <div className="text-sm text-gray-300">Response</div>
-              </div>
-              <div className="text-center p-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-xl">
-                <div className="text-3xl font-bold text-[#F5B700]">98%</div>
-                <div className="text-sm text-gray-300">Satisfaction</div>
-              </div>
-              <div className="text-center p-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-xl">
-                <div className="text-3xl font-bold text-[#F5B700]">3+</div>
-                <div className="text-sm text-gray-300">Countries</div>
-              </div>
+            </div>
+
+            {/* Hero Image */}
+            <div className="hidden lg:block">
+              <img 
+                src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=800&h=600&fit=crop" 
+                alt="Customer support team" 
+                className="w-full h-full object-cover rounded-2xl shadow-2xl"
+              />
             </div>
           </div>
         </div>
@@ -144,170 +118,167 @@ const Contact = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-[#0B3C5D] mb-4">Contact Us</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose your preferred way to get in touch
+              Choose your preferred way to get in touch with our team
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {contactMethods.map((method, index) => (
-              <div key={index} className="bg-[#F5F7FA] rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
+              <a 
+                key={index} 
+                href={method.link}
+                className="bg-[#F5F7FA] rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1 block"
+              >
                 <div className="w-16 h-16 bg-[#0B3C5D] rounded-xl flex items-center justify-center mx-auto mb-6">
                   <method.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-[#1A1A1A] mb-2">{method.title}</h3>
                 <div className="text-lg font-semibold text-[#1F6AE1] mb-2">{method.details}</div>
                 <p className="text-gray-600 text-sm">{method.description}</p>
-              </div>
+              </a>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Form & Office Info */}
+      {/* Office Section with Images */}
       <section className="py-24 bg-[#F5F7FA]">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Contact Form */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h2 className="text-3xl font-bold text-[#0B3C5D] mb-4">Send a Message</h2>
-              <p className="text-gray-600 mb-8">
-                Fill out the form and we'll get back to you within 24 hours.
-              </p>
-              
-              {isSubmitted && (
-                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center">
-                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold text-green-800">Message Sent!</div>
-                    <div className="text-green-600 text-sm">We'll get back to you soon.</div>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-[#0B3C5D] mb-4">Visit Our Office</h2>
+            <p className="text-lg text-gray-600">Our headquarters in Mutare, Zimbabwe</p>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Office Images */}
+              <div className="space-y-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=400&fit=crop" 
+                  alt="Office interior" 
+                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                />
+                <div className="grid grid-cols-2 gap-4">
+                  <img 
+                    src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=400&h=300&fit=crop" 
+                    alt="Team workspace" 
+                    className="w-full h-48 object-cover rounded-xl"
+                  />
+                  <img 
+                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop" 
+                    alt="Office building" 
+                    className="w-full h-48 object-cover rounded-xl"
+                  />
+                </div>
+              </div>
+
+              {/* Contact Info */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 className="text-2xl font-bold text-[#0B3C5D] mb-8">Contact Information</h3>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start">
+                    <MapPin className="w-6 h-6 text-[#1F6AE1] mt-1 mr-4 flex-shrink-0" />
+                    <div>
+                      <div className="font-semibold text-[#1A1A1A]">Address</div>
+                      <div className="text-gray-600">
+                        63 Embassy Building, Aerodrome Rd<br />
+                        Mutare, Zimbabwe
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <Phone className="w-6 h-6 text-[#1F6AE1] mt-1 mr-4 flex-shrink-0" />
+                    <div>
+                      <div className="font-semibold text-[#1A1A1A]">Phone</div>
+                      <a href="tel:+263781234567" className="text-gray-600 hover:text-[#1F6AE1]">+263 78 123 4567</a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <Mail className="w-6 h-6 text-[#1F6AE1] mt-1 mr-4 flex-shrink-0" />
+                    <div>
+                      <div className="font-semibold text-[#1A1A1A]">Email</div>
+                      <a href="mailto:info@xash.network" className="text-gray-600 hover:text-[#1F6AE1]">info@xash.network</a>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <Clock className="w-6 h-6 text-[#1F6AE1] mt-1 mr-4 flex-shrink-0" />
+                    <div>
+                      <div className="font-semibold text-[#1A1A1A]">Business Hours</div>
+                      <div className="text-gray-600">
+                        Mon-Fri: 8:00 AM - 5:00 PM<br />
+                        Saturday: 9:00 AM - 1:00 PM<br />
+                        Sunday: Closed
+                      </div>
+                    </div>
                   </div>
                 </div>
-              )}
-              
-              <div className="space-y-6">
-                <div>
-                  <label className="block text-gray-700 font-medium mb-2">Full Name *</label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1F6AE1] focus:border-transparent outline-none"
-                    placeholder="John Doe"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-gray-700 font-medium mb-2">Email *</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1F6AE1] focus:border-transparent outline-none"
-                    placeholder="john@example.com"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-gray-700 font-medium mb-2">Phone</label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1F6AE1] focus:border-transparent outline-none"
-                    placeholder="+263 78 123 4567"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-gray-700 font-medium mb-2">Subject *</label>
-                  <input
-                    type="text"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1F6AE1] focus:border-transparent outline-none"
-                    placeholder="How can we help?"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-gray-700 font-medium mb-2">Message *</label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1F6AE1] focus:border-transparent outline-none resize-none"
-                    placeholder="Your message..."
-                  />
-                </div>
-                
-                <button
-                  onClick={handleSubmit}
-                  disabled={isLoading}
-                  className="w-full bg-[#1F6AE1] text-white py-4 rounded-lg hover:bg-[#1558B8] transition-colors font-semibold flex items-center justify-center disabled:opacity-50"
+
+                <a 
+                  href="https://maps.google.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="mt-8 w-full bg-[#1F6AE1] text-white py-3 rounded-lg hover:bg-[#1558B8] transition-colors font-semibold text-center block"
                 >
-                  {isLoading ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
-                      Sending...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5 mr-2" />
-                      Send Message
-                    </>
-                  )}
-                </button>
+                  Get Directions
+                </a>
               </div>
             </div>
-            
-            {/* Office Information */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
-              <h2 className="text-3xl font-bold text-[#0B3C5D] mb-8">Our Office</h2>
-              
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <MapPin className="w-6 h-6 text-[#1F6AE1] mt-1 mr-4 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold text-[#1A1A1A]">Address</div>
-                    <div className="text-gray-600">
-                      63 Embassy Building, Aerodrome Rd<br />
-                      Mutare, Zimbabwe
+          </div>
+        </div>
+      </section>
+
+      {/* Support Team Section */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-4xl font-bold text-[#0B3C5D] mb-6">
+                  Our Support Team is Ready to Help
+                </h2>
+                <p className="text-lg text-gray-600 mb-8">
+                  Whether you need technical assistance, sales information, or partnership opportunities, our dedicated team is here to support you every step of the way.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-[#0B3C5D] rounded-full flex items-center justify-center mr-4">
+                      <Phone className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-[#1A1A1A]">Call Us Directly</div>
+                      <div className="text-gray-600">Speak with our team in real-time</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-[#1F6AE1] rounded-full flex items-center justify-center mr-4">
+                      <Mail className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-[#1A1A1A]">Email Support</div>
+                      <div className="text-gray-600">Get detailed responses within 24 hours</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-[#25D366] rounded-full flex items-center justify-center mr-4">
+                      <MessageCircle className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-[#1A1A1A]">WhatsApp Chat</div>
+                      <div className="text-gray-600">Quick responses via instant messaging</div>
                     </div>
                   </div>
                 </div>
-                
-                <div className="flex items-start">
-                  <Phone className="w-6 h-6 text-[#1F6AE1] mt-1 mr-4 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold text-[#1A1A1A]">Phone</div>
-                    <div className="text-gray-600">+263 78 123 4567</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <Mail className="w-6 h-6 text-[#1F6AE1] mt-1 mr-4 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold text-[#1A1A1A]">Email</div>
-                    <div className="text-gray-600">info@xash.network</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <Clock className="w-6 h-6 text-[#1F6AE1] mt-1 mr-4 flex-shrink-0" />
-                  <div>
-                    <div className="font-semibold text-[#1A1A1A]">Business Hours</div>
-                    <div className="text-gray-600">
-                      Mon-Fri: 8:00 AM - 5:00 PM<br />
-                      Saturday: 9:00 AM - 1:00 PM<br />
-                      Sunday: Closed
-                    </div>
-                  </div>
-                </div>
+              </div>
+              <div>
+                <img 
+                  src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800&h=600&fit=crop" 
+                  alt="Support team" 
+                  className="w-full h-full object-cover rounded-2xl shadow-xl"
+                />
               </div>
             </div>
           </div>
@@ -315,7 +286,7 @@ const Contact = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-[#F5F7FA]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
@@ -325,7 +296,7 @@ const Contact = () => {
             
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
+                <div key={index} className="bg-white border border-gray-200 rounded-xl overflow-hidden">
                   <button
                     className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-[#F5F7FA] transition-colors"
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}

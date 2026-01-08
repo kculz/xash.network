@@ -14,7 +14,8 @@ import {
   TrendingUp,
   RefreshCw,
   Building,
-  Lock
+  Lock,
+  Sparkles
 } from 'lucide-react';
 
 const FinancialSoftware = () => {
@@ -24,32 +25,38 @@ const FinancialSoftware = () => {
     {
       icon: Calculator,
       title: 'Automated Bookkeeping',
-      description: 'Automatic transaction categorization and journal entries with real-time financial data'
+      description: 'Automatic transaction categorization and journal entries with real-time financial data',
+      gradient: 'from-[#0B3C5D] to-[#1F6AE1]'
     },
     {
       icon: FileText,
       title: 'Invoice Management',
-      description: 'Create, send, and track invoices with custom templates and automatic reminders'
+      description: 'Create, send, and track invoices with custom templates and automatic reminders',
+      gradient: 'from-[#1F6AE1] to-[#0B3C5D]'
     },
     {
       icon: TrendingUp,
       title: 'Financial Analytics',
-      description: 'Advanced analytics with profit & loss analysis and cash flow forecasting'
+      description: 'Advanced analytics with profit & loss analysis and cash flow forecasting',
+      gradient: 'from-[#0B3C5D] to-[#1F6AE1]'
     },
     {
       icon: RefreshCw,
       title: 'Bank Reconciliation',
-      description: 'AI-powered transaction matching with 95% automatic reconciliation rate'
+      description: 'AI-powered transaction matching with 95% automatic reconciliation rate',
+      gradient: 'from-[#1F6AE1] to-[#0B3C5D]'
     },
     {
       icon: BarChart3,
       title: 'Custom Reporting',
-      description: 'Generate standard and custom reports in PDF, Excel, or live dashboards'
+      description: 'Generate standard and custom reports in PDF, Excel, or live dashboards',
+      gradient: 'from-[#0B3C5D] to-[#1F6AE1]'
     },
     {
       icon: Code,
       title: 'API Integration',
-      description: 'REST API with comprehensive documentation and SDKs for major languages'
+      description: 'REST API with comprehensive documentation and SDKs for major languages',
+      gradient: 'from-[#1F6AE1] to-[#0B3C5D]'
     }
   ];
 
@@ -63,7 +70,8 @@ const FinancialSoftware = () => {
         'Automated tax calculations',
         'Mobile app access',
         'POS integration'
-      ]
+      ],
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80'
     },
     {
       title: 'For Enterprises',
@@ -74,7 +82,8 @@ const FinancialSoftware = () => {
         'Custom reporting modules',
         'SLA guarantees',
         'Dedicated support team'
-      ]
+      ],
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80'
     },
     {
       title: 'For Developers',
@@ -85,57 +94,8 @@ const FinancialSoftware = () => {
         'Webhook support',
         'SDKs for major languages',
         'Developer community'
-      ]
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Startup',
-      price: '$49',
-      period: 'per month',
-      description: 'Perfect for small businesses',
-      features: [
-        'Up to 1,000 transactions/month',
-        'Basic accounting features',
-        'Standard reports',
-        'Email support',
-        '1 user account'
       ],
-      cta: 'Start Free Trial',
-      popular: false
-    },
-    {
-      name: 'Business',
-      price: '$149',
-      period: 'per month',
-      description: 'Ideal for growing companies',
-      features: [
-        'Up to 10,000 transactions/month',
-        'Advanced accounting',
-        'Custom reporting',
-        'API access',
-        '5 user accounts',
-        'Priority support'
-      ],
-      cta: 'Get Started',
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: 'tailored pricing',
-      description: 'For large organizations',
-      features: [
-        'Unlimited transactions',
-        'Full feature access',
-        'Custom modules',
-        'Advanced API',
-        'Unlimited users',
-        'Dedicated support'
-      ],
-      cta: 'Contact Sales',
-      popular: false
+      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80'
     }
   ];
 
@@ -144,25 +104,29 @@ const FinancialSoftware = () => {
       icon: Shield,
       title: 'Bank-Level Security',
       description: '256-bit encryption for all data',
-      items: ['PCI DSS', 'GDPR', 'ISO 27001']
+      items: ['PCI DSS', 'GDPR', 'ISO 27001'],
+      gradient: 'from-[#0B3C5D] to-[#1F6AE1]'
     },
     {
       icon: Lock,
       title: 'Access Control',
       description: 'Granular user permissions',
-      items: ['Multi-factor auth', 'IP whitelisting', 'Audit logs']
+      items: ['Multi-factor auth', 'IP whitelisting', 'Audit logs'],
+      gradient: 'from-[#1F6AE1] to-[#0B3C5D]'
     },
     {
       icon: Clock,
       title: 'Data Backup',
       description: '99.9% uptime guarantee',
-      items: ['Daily backups', 'Disaster recovery', 'Redundancy']
+      items: ['Daily backups', 'Disaster recovery', 'Redundancy'],
+      gradient: 'from-[#0B3C5D] to-[#1F6AE1]'
     },
     {
       icon: Globe,
       title: 'Multi-Currency',
       description: 'Support for 10+ currencies',
-      items: ['USD', 'ZWL', 'ZAR', 'KES']
+      items: ['USD', 'ZWL', 'ZAR', 'KES'],
+      gradient: 'from-[#1F6AE1] to-[#0B3C5D]'
     }
   ];
 
@@ -192,73 +156,79 @@ const FinancialSoftware = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-[#0B3C5D] text-white overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden opacity-10">
-          <div className="absolute -top-20 -right-20 w-96 h-96 bg-[#1F6AE1] rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 -left-20 w-96 h-96 bg-[#F5B700] rounded-full blur-3xl"></div>
+      <section className="relative bg-gradient-to-br from-[#0B3C5D] via-[#0B3C5D] to-[#1F6AE1] text-white overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden opacity-30">
+          <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-[#1F6AE1] rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-1/3 -left-40 w-[500px] h-[500px] bg-[#F5B700] rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
         </div>
 
-        <div className="container mx-auto px-4 py-24 lg:py-32 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-6 py-20 lg:py-32 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="inline-flex items-center bg-white bg-opacity-10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-white border-opacity-20">
+              <div className="inline-flex items-center bg-white/10 backdrop-blur-md px-5 py-2.5 rounded-full mb-8 border border-white/20">
                 <Shield className="w-4 h-4 text-[#F5B700] mr-2" />
-                <span className="text-sm">For Businesses & Developers</span>
+                <span className="text-sm font-medium">For Businesses & Developers</span>
               </div>
               
-              <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Business Financial Software
+              <h1 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight">
+                Business Financial
+                <span className="block bg-gradient-to-r from-[#F5B700] to-white bg-clip-text  mt-2">
+                  Software
+                </span>
               </h1>
               
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-200 mb-10 leading-relaxed">
                 Comprehensive accounting, reporting, and reconciliation tools with powerful API integration for businesses across Africa.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <button className="bg-[#1F6AE1] text-white px-8 py-4 rounded-lg hover:bg-[#1558B8] transition-all duration-300 font-semibold flex items-center justify-center group">
-                  Start Free Trial
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </button>
-                <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-[#0B3C5D] transition-all duration-300 font-semibold">
-                  View Demo
-                </button>
-              </div>
 
-              <div className="grid grid-cols-3 gap-6">
-                <div>
-                  <div className="text-3xl font-bold text-[#F5B700] mb-1">99.9%</div>
-                  <div className="text-sm text-gray-300">Accuracy</div>
+              <div className="grid grid-cols-3 gap-8">
+                <div className="space-y-2">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-[#F5B700] to-white bg-clip-text ">99.9%</div>
+                  <div className="text-sm text-gray-300 font-medium">Accuracy</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-[#F5B700] mb-1">&lt;1s</div>
-                  <div className="text-sm text-gray-300">API Response</div>
+                <div className="space-y-2">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-[#F5B700] to-white bg-clip-text ">&lt;1s</div>
+                  <div className="text-sm text-gray-300 font-medium">API Response</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-[#F5B700] mb-1">24/7</div>
-                  <div className="text-sm text-gray-300">Support</div>
+                <div className="space-y-2">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-[#F5B700] to-white bg-clip-text ">24/7</div>
+                  <div className="text-sm text-gray-300 font-medium">Support</div>
                 </div>
               </div>
             </div>
 
             <div className="relative hidden lg:block">
-              <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-3xl p-8 border border-white border-opacity-20">
-                <div className="aspect-video bg-[#1F6AE1] bg-opacity-20 rounded-2xl flex items-center justify-center mb-6">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <BarChart3 className="w-12 h-12" />
-                    </div>
-                    <p className="text-sm">Financial Dashboard</p>
-                  </div>
-                </div>
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                <img 
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" 
+                  alt="Financial analytics dashboard"
+                  className="w-full h-[600px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B3C5D]/80 via-transparent to-transparent"></div>
                 
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white bg-opacity-10 p-4 rounded-lg text-center">
-                    <Calculator className="w-8 h-8 text-[#F5B700] mx-auto mb-2" />
-                    <div className="text-sm">Accounting</div>
-                  </div>
-                  <div className="bg-white bg-opacity-10 p-4 rounded-lg text-center">
-                    <Code className="w-8 h-8 text-[#F5B700] mx-auto mb-2" />
-                    <div className="text-sm">API Access</div>
+                {/* Floating Stats Card */}
+                <div className="absolute bottom-8 left-8 right-8">
+                  <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-12 h-12 bg-gradient-to-br from-[#F5B700] to-[#d4a000] rounded-xl flex items-center justify-center">
+                          <Calculator className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <div className="text-xs text-gray-300">Accounting</div>
+                          <div className="font-bold">Automated</div>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-12 h-12 bg-gradient-to-br from-[#1F6AE1] to-[#1558B8] rounded-xl flex items-center justify-center">
+                          <Code className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <div className="text-xs text-gray-300">API Access</div>
+                          <div className="font-bold">Full</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -267,63 +237,87 @@ const FinancialSoftware = () => {
         </div>
 
         <div className="absolute bottom-0 left-0 right-0">
-          <svg className="w-full h-16 md:h-24" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <svg className="w-full h-20 md:h-32" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
             <path d="M0,64 C360,100 720,40 1080,70 C1440,100 1440,120 1440,120 L0,120 Z" fill="white"/>
           </svg>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#0B3C5D] mb-4">Comprehensive Features</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+      <section className="py-28 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20">
+            <div className="inline-block bg-[#F5F7FA] px-6 py-2 rounded-full mb-6">
+              <span className="text-sm font-semibold text-[#0B3C5D]">Core Features</span>
+            </div>
+            <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">Comprehensive Features</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Everything you need to manage your business finances
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {features.map((feature, index) => (
-              <div key={index} className="bg-[#F5F7FA] rounded-2xl p-8 hover:shadow-lg transition-all duration-300 border-2 border-transparent hover:border-[#1F6AE1]">
-                <div className="w-16 h-16 bg-[#0B3C5D] rounded-xl flex items-center justify-center mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
+              <div key={index} className="group bg-white rounded-3xl p-10 hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-transparent relative overflow-hidden">
+                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
                 
-                <h3 className="text-xl font-bold text-[#1A1A1A] mb-3">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                <div className="relative z-10">
+                  <div className={`w-20 h-20 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
+                    <feature.icon className="w-10 h-10 text-white" />
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-[#1A1A1A] mb-4 leading-tight">{feature.title}</h3>
+                  <p className="text-gray-600 leading-relaxed text-lg">{feature.description}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-24 bg-[#F5F7FA]">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#0B3C5D] mb-4">Who Benefits</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+      {/* Benefits Section with Images */}
+      <section className="py-28 bg-gradient-to-br from-[#F5F7FA] to-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20">
+            <div className="inline-block bg-white px-6 py-2 rounded-full mb-6 shadow-sm">
+              <span className="text-sm font-semibold text-[#0B3C5D]">For Every Business</span>
+            </div>
+            <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">Who Benefits</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Tailored solutions for different business needs
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="space-y-32 max-w-7xl mx-auto">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <div className="bg-[#0B3C5D] p-8 text-white">
-                  <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mb-4">
-                    <benefit.icon className="w-8 h-8" />
+              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+                {/* Image */}
+                <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                  <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
+                    <img 
+                      src={benefit.image} 
+                      alt={benefit.title}
+                      className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#0B3C5D]/30 to-transparent"></div>
+                    
+                    {/* Floating Icon */}
+                    <div className="absolute top-8 left-8 w-20 h-20 bg-gradient-to-br from-[#0B3C5D] to-[#1F6AE1] rounded-2xl flex items-center justify-center shadow-2xl">
+                      <benefit.icon className="w-10 h-10 text-white" />
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold">{benefit.title}</h3>
                 </div>
-                
-                <div className="p-8">
-                  <ul className="space-y-3">
+
+                {/* Content */}
+                <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
+                  <h3 className="text-4xl font-bold text-[#0B3C5D] mb-8">{benefit.title}</h3>
+                  <ul className="space-y-5">
                     {benefit.items.map((item, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <CheckCircle className="w-5 h-5 text-[#1F6AE1] mt-0.5 mr-3 flex-shrink-0" />
-                        <span className="text-gray-600">{item}</span>
+                      <li key={idx} className="flex items-start group">
+                        <div className="w-10 h-10 bg-gradient-to-br from-[#1F6AE1] to-[#0B3C5D] rounded-xl flex items-center justify-center mr-5 flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
+                          <CheckCircle className="w-6 h-6 text-white" />
+                        </div>
+                        <span className="text-gray-700 text-lg leading-relaxed pt-1">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -335,139 +329,125 @@ const FinancialSoftware = () => {
       </section>
 
       {/* Security & Compliance */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#0B3C5D] mb-4">Security & Compliance</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+      <section className="py-28 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20">
+            <div className="inline-block bg-[#F5F7FA] px-6 py-2 rounded-full mb-6">
+              <span className="text-sm font-semibold text-[#0B3C5D]">Trust & Safety</span>
+            </div>
+            <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">Security & Compliance</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Enterprise-grade security for your financial data
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {securityFeatures.map((feature, index) => (
-              <div key={index} className="bg-[#F5F7FA] rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-[#0B3C5D] rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
+              <div key={index} className="group bg-white rounded-3xl p-10 text-center hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-transparent hover:-translate-y-2">
+                <div className={`w-20 h-20 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
+                  <feature.icon className="w-10 h-10 text-white" />
                 </div>
                 
-                <h3 className="text-xl font-bold text-[#1A1A1A] mb-3">{feature.title}</h3>
-                <p className="text-gray-600 mb-4">{feature.description}</p>
+                <h3 className="text-2xl font-bold text-[#1A1A1A] mb-4">{feature.title}</h3>
+                <p className="text-gray-600 mb-6 text-lg">{feature.description}</p>
                 
-                <div className="space-y-1">
+                <div className="space-y-2">
                   {feature.items.map((item, idx) => (
-                    <div key={idx} className="text-sm text-gray-500">{item}</div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-24 bg-[#F5F7FA]">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#0B3C5D] mb-4">Simple Pricing</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose the plan that fits your business needs
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div 
-                key={index}
-                className={`bg-white rounded-2xl p-8 border-2 ${plan.popular ? 'border-[#1F6AE1] shadow-xl' : 'border-gray-200'} relative hover:shadow-xl transition-shadow`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#F5B700] text-white px-4 py-1 rounded-full font-bold text-sm">
-                    Most Popular
-                  </div>
-                )}
-                
-                <h3 className="text-2xl font-bold text-[#1A1A1A] mb-2">{plan.name}</h3>
-                
-                <div className="mb-4">
-                  <span className="text-4xl font-bold text-[#0B3C5D]">{plan.price}</span>
-                  <span className="text-gray-600 ml-2">{plan.period}</span>
-                </div>
-                
-                <p className="text-gray-600 mb-8">{plan.description}</p>
-                
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-600">
-                      <CheckCircle className="w-5 h-5 text-[#1F6AE1] mr-3 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <button className={`w-full py-4 rounded-lg font-semibold transition-colors ${
-                  plan.popular
-                    ? 'bg-[#1F6AE1] text-white hover:bg-[#1558B8]'
-                    : 'bg-[#0B3C5D] text-white hover:bg-[#092f48]'
-                }`}>
-                  {plan.cta}
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl font-bold text-center text-[#0B3C5D] mb-12">
-              Frequently Asked Questions
-            </h2>
-            
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
-                  <button
-                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-[#F5F7FA] transition-colors"
-                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  >
-                    <span className="font-semibold text-lg text-[#1A1A1A] pr-4">
-                      {faq.question}
-                    </span>
-                    <ChevronDown className={`w-5 h-5 text-[#1F6AE1] flex-shrink-0 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
-                  </button>
-                  {openFaq === index && (
-                    <div className="px-6 pb-4 text-gray-600">
-                      {faq.answer}
+                    <div key={idx} className="inline-block bg-[#F5F7FA] px-4 py-2 rounded-full text-sm text-gray-600 font-medium mx-1 mb-2">
+                      {item}
                     </div>
-                  )}
+                  ))}
                 </div>
-              ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* API Integration Showcase */}
+      <section className="py-28 bg-gradient-to-br from-[#F5F7FA] to-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              {/* Content */}
+              <div>
+                <div className="inline-block bg-white px-6 py-2 rounded-full mb-6 shadow-sm">
+                  <span className="text-sm font-semibold text-[#0B3C5D]">Developer Tools</span>
+                </div>
+                <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">Powerful API Integration</h2>
+                <p className="text-xl text-gray-600 mb-10 leading-relaxed">
+                  REST API with comprehensive documentation and SDKs for seamless integration into your existing systems.
+                </p>
+
+                <div className="space-y-6">
+                  {[
+                    { title: 'Complete Documentation', desc: 'Detailed guides and code examples' },
+                    { title: 'Sandbox Environment', desc: 'Test integrations risk-free' },
+                    { title: 'Multiple SDKs', desc: 'Support for major programming languages' },
+                    { title: 'Webhook Support', desc: 'Real-time event notifications' }
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start space-x-4 group">
+                      <div className="w-10 h-10 bg-gradient-to-br from-[#1F6AE1] to-[#0B3C5D] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
+                        <Code className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-[#1A1A1A] text-lg mb-1">{item.title}</h4>
+                        <p className="text-gray-600">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Image */}
+              <div className="relative">
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                  <img 
+                    src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80" 
+                    alt="API development"
+                    className="w-full h-[500px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#0B3C5D]/40 to-transparent"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 bg-[#0B3C5D] text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Transform Your Financial Operations
-            </h2>
-            <p className="text-xl text-gray-300 mb-10">
-              Join forward-thinking businesses using our financial software
-            </p>
+      {/* FAQ */}
+      <section className="py-28 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-block bg-[#F5F7FA] px-6 py-2 rounded-full mb-6">
+                <span className="text-sm font-semibold text-[#0B3C5D]">FAQ</span>
+              </div>
+              <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-xl text-gray-600">Everything you need to know</p>
+            </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-[#1F6AE1] text-white px-10 py-5 rounded-lg hover:bg-[#1558B8] transition-all duration-300 font-semibold text-lg">
-                Start Free Trial
-              </button>
-              <button className="bg-transparent border-2 border-white text-white px-10 py-5 rounded-lg hover:bg-white hover:text-[#0B3C5D] transition-all duration-300 font-semibold text-lg">
-                Schedule Demo
-              </button>
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:border-[#1F6AE1] transition-colors">
+                  <button
+                    className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-[#F5F7FA] transition-colors"
+                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                  >
+                    <span className="font-bold text-xl text-[#1A1A1A] pr-4">
+                      {faq.question}
+                    </span>
+                    <ChevronDown className={`w-6 h-6 text-[#1F6AE1] flex-shrink-0 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} />
+                  </button>
+                  {openFaq === index && (
+                    <div className="px-8 pb-6 text-gray-600 text-lg leading-relaxed">
+                      {faq.answer}
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </div>

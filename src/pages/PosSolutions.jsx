@@ -18,7 +18,8 @@ import {
   FileText,
   Star,
   Clock,
-  ChevronDown
+  ChevronDown,
+  Sparkles
 } from 'lucide-react';
 
 const PosSolutions = () => {
@@ -28,32 +29,38 @@ const PosSolutions = () => {
     {
       icon: CreditCard,
       title: 'Multi-Payment Support',
-      description: 'Accept airtime, electricity bills, DSTV, water bills, and mobile data bundles across all major providers.'
+      description: 'Accept airtime, electricity bills, DSTV, water bills, and mobile data bundles across all major providers.',
+      gradient: 'from-[#0B3C5D] to-[#1F6AE1]'
     },
     {
       icon: BarChart3,
       title: 'Real-Time Reporting',
-      description: 'Live dashboard with transaction analytics, commission tracking, and performance metrics.'
+      description: 'Live dashboard with transaction analytics, commission tracking, and performance metrics.',
+      gradient: 'from-[#1F6AE1] to-[#0B3C5D]'
     },
     {
       icon: Shield,
       title: 'Secure Transactions',
-      description: 'Bank-level encryption with PCI DSS compliance for all payment processing.'
+      description: 'Bank-level encryption with PCI DSS compliance for all payment processing.',
+      gradient: 'from-[#0B3C5D] to-[#1F6AE1]'
     },
     {
       icon: Globe,
       title: 'Multi-Currency Support',
-      description: 'Process transactions in USD, ZWL, and other currencies with automatic conversion.'
+      description: 'Process transactions in USD, ZWL, and other currencies with automatic conversion.',
+      gradient: 'from-[#1F6AE1] to-[#0B3C5D]'
     },
     {
       icon: Users,
       title: 'Agent Management',
-      description: 'Manage multiple agents with individual performance tracking and commission rates.'
+      description: 'Manage multiple agents with individual performance tracking and commission rates.',
+      gradient: 'from-[#0B3C5D] to-[#1F6AE1]'
     },
     {
       icon: Zap,
       title: 'Instant Processing',
-      description: 'Transactions completed in under 30 seconds with immediate confirmation.'
+      description: 'Transactions completed in under 30 seconds with immediate confirmation.',
+      gradient: 'from-[#1F6AE1] to-[#0B3C5D]'
     }
   ];
 
@@ -67,7 +74,8 @@ const PosSolutions = () => {
         'No technical expertise required',
         '24/7 transaction capability',
         'Detailed sales reporting'
-      ]
+      ],
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80'
     },
     {
       title: 'For Mobile Agents',
@@ -78,7 +86,8 @@ const PosSolutions = () => {
         'Low startup costs with mobile app',
         'Flexible working hours',
         'Real-time commission tracking'
-      ]
+      ],
+      image: 'https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&q=80'
     },
     {
       title: 'For Business Owners',
@@ -89,57 +98,8 @@ const PosSolutions = () => {
         'Custom reporting and analytics',
         'Scalable as business grows',
         'API integration options'
-      ]
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: 'Free',
-      period: 'No monthly fees',
-      description: 'Perfect for individual agents',
-      features: [
-        'Mobile POS app',
-        'Basic transaction processing',
-        'Standard commissions',
-        'Email support',
-        'Up to 50 transactions/day'
       ],
-      cta: 'Get Started Free',
-      popular: false
-    },
-    {
-      name: 'Business',
-      price: '$29',
-      period: 'per month',
-      description: 'Ideal for small businesses',
-      features: [
-        'All Starter features',
-        'Advanced reporting',
-        'Priority support',
-        'API access',
-        'Multi-user accounts',
-        'Unlimited transactions'
-      ],
-      cta: 'Start Business Plan',
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: 'Tailored pricing',
-      description: 'For large organizations',
-      features: [
-        'All Business features',
-        'White-label solution',
-        'Dedicated account manager',
-        'Custom integration',
-        'Advanced security features',
-        'SLA guarantee'
-      ],
-      cta: 'Contact Sales',
-      popular: false
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80'
     }
   ];
 
@@ -148,13 +108,15 @@ const PosSolutions = () => {
       name: 'Chido M.',
       business: 'Corner Store, Harare',
       content: 'Since adding Xash POS, our daily revenue increased by 40%. Bill payments bring customers in daily.',
-      rating: 5
+      rating: 5,
+      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&q=80'
     },
     {
       name: 'Tendai K.',
       business: 'Mobile Agent, Bulawayo',
       content: 'The mobile app makes it easy to process transactions anywhere. Commissions are paid on time.',
-      rating: 5
+      rating: 5,
+      image: 'https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=200&q=80'
     }
   ];
 
@@ -184,73 +146,71 @@ const PosSolutions = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-[#0B3C5D] text-white overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden opacity-10">
-          <div className="absolute -top-20 -right-20 w-96 h-96 bg-[#1F6AE1] rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 -left-20 w-96 h-96 bg-[#F5B700] rounded-full blur-3xl"></div>
+      <section className="relative bg-gradient-to-br from-[#0B3C5D] via-[#0B3C5D] to-[#1F6AE1] text-white overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden opacity-30">
+          <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-[#1F6AE1] rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-1/3 -left-40 w-[500px] h-[500px] bg-[#F5B700] rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
         </div>
 
-        <div className="container mx-auto px-4 py-24 lg:py-32 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-6 py-20 lg:py-32 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="inline-flex items-center bg-white bg-opacity-10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-white border-opacity-20">
+              <div className="inline-flex items-center bg-white/10 backdrop-blur-md px-5 py-2.5 rounded-full mb-8 border border-white/20">
                 <Shield className="w-4 h-4 text-[#F5B700] mr-2" />
-                <span className="text-sm">Trusted by 10,000+ Agents</span>
+                <span className="text-sm font-medium">Trusted by 10,000+ Agents</span>
               </div>
               
-              <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                POS Software & Integration
+              <h1 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight">
+                POS Software &
+                <span className="block bg-gradient-to-r from-[#F5B700] to-white bg-clip-text  mt-2">
+                  Integration
+                </span>
               </h1>
               
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-200 mb-10 leading-relaxed">
                 Transform your business with our comprehensive point-of-sale system. Process payments, earn commissions, and grow your revenue.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <button className="bg-[#1F6AE1] text-white px-8 py-4 rounded-lg hover:bg-[#1558B8] transition-all duration-300 font-semibold flex items-center justify-center group">
-                  Start Free Trial
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </button>
-                <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-[#0B3C5D] transition-all duration-300 font-semibold">
-                  Request Demo
-                </button>
-              </div>
 
-              <div className="grid grid-cols-3 gap-6">
-                <div>
-                  <div className="text-3xl font-bold text-[#F5B700] mb-1">99.9%</div>
-                  <div className="text-sm text-gray-300">Uptime</div>
+              <div className="grid grid-cols-3 gap-8">
+                <div className="space-y-2">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-[#F5B700] to-white bg-clip-text ">99.9%</div>
+                  <div className="text-sm text-gray-300 font-medium">Uptime</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-[#F5B700] mb-1">&lt;30s</div>
-                  <div className="text-sm text-gray-300">Processing</div>
+                <div className="space-y-2">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-[#F5B700] to-white bg-clip-text ">&lt;30s</div>
+                  <div className="text-sm text-gray-300 font-medium">Processing</div>
                 </div>
-                <div>
-                  <div className="text-3xl font-bold text-[#F5B700] mb-1">24/7</div>
-                  <div className="text-sm text-gray-300">Support</div>
+                <div className="space-y-2">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-[#F5B700] to-white bg-clip-text ">24/7</div>
+                  <div className="text-sm text-gray-300 font-medium">Support</div>
                 </div>
               </div>
             </div>
 
             <div className="relative hidden lg:block">
-              <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-3xl p-8 border border-white border-opacity-20">
-                <div className="aspect-video bg-[#1F6AE1] bg-opacity-20 rounded-2xl flex items-center justify-center mb-6">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <CreditCard className="w-12 h-12" />
-                    </div>
-                    <p className="text-sm">POS Dashboard</p>
-                  </div>
-                </div>
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                <img 
+                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80" 
+                  alt="POS system in use"
+                  className="w-full h-[600px] object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B3C5D]/80 via-transparent to-transparent"></div>
                 
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white bg-opacity-10 p-4 rounded-lg text-center">
-                    <div className="font-bold">Airtime Sales</div>
-                    <div className="text-sm text-gray-300">Instant</div>
-                  </div>
-                  <div className="bg-white bg-opacity-10 p-4 rounded-lg text-center">
-                    <div className="font-bold">Bill Payments</div>
-                    <div className="text-sm text-gray-300">All Providers</div>
+                {/* Floating Stats Card */}
+                <div className="absolute bottom-8 left-8 right-8">
+                  <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="text-center">
+                        <CreditCard className="w-8 h-8 mx-auto mb-2 text-[#F5B700]" />
+                        <div className="text-sm text-gray-300">Airtime Sales</div>
+                        <div className="text-lg font-bold">Instant</div>
+                      </div>
+                      <div className="text-center">
+                        <Zap className="w-8 h-8 mx-auto mb-2 text-[#F5B700]" />
+                        <div className="text-sm text-gray-300">Bill Payments</div>
+                        <div className="text-lg font-bold">All Providers</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -259,63 +219,87 @@ const PosSolutions = () => {
         </div>
 
         <div className="absolute bottom-0 left-0 right-0">
-          <svg className="w-full h-16 md:h-24" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <svg className="w-full h-20 md:h-32" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
             <path d="M0,64 C360,100 720,40 1080,70 C1440,100 1440,120 1440,120 L0,120 Z" fill="white"/>
           </svg>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#0B3C5D] mb-4">Powerful Features</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Everything you need to run a successful POS business
+      <section className="py-28 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20">
+            <div className="inline-block bg-[#F5F7FA] px-6 py-2 rounded-full mb-6">
+              <span className="text-sm font-semibold text-[#0B3C5D]">Powerful Features</span>
+            </div>
+            <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">Everything You Need</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive tools to run a successful POS business
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {features.map((feature, index) => (
-              <div key={index} className="bg-[#F5F7FA] rounded-2xl p-8 hover:shadow-lg transition-all duration-300 border-2 border-transparent hover:border-[#1F6AE1]">
-                <div className="w-16 h-16 bg-[#0B3C5D] rounded-xl flex items-center justify-center mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
+              <div key={index} className="group bg-white rounded-3xl p-10 hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-transparent relative overflow-hidden">
+                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
                 
-                <h3 className="text-xl font-bold text-[#1A1A1A] mb-3">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                <div className="relative z-10">
+                  <div className={`w-20 h-20 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg`}>
+                    <feature.icon className="w-10 h-10 text-white" />
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-[#1A1A1A] mb-4 leading-tight">{feature.title}</h3>
+                  <p className="text-gray-600 leading-relaxed text-lg">{feature.description}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-24 bg-[#F5F7FA]">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#0B3C5D] mb-4">Who Benefits</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+      {/* Benefits Section with Images */}
+      <section className="py-28 bg-gradient-to-br from-[#F5F7FA] to-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20">
+            <div className="inline-block bg-white px-6 py-2 rounded-full mb-6 shadow-sm">
+              <span className="text-sm font-semibold text-[#0B3C5D]">Solutions For Everyone</span>
+            </div>
+            <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">Who Benefits</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our POS solutions are designed for various business needs
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="space-y-32 max-w-7xl mx-auto">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <div className="bg-[#0B3C5D] p-8 text-white">
-                  <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center mb-4">
-                    <benefit.icon className="w-8 h-8" />
+              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+                {/* Image */}
+                <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                  <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
+                    <img 
+                      src={benefit.image} 
+                      alt={benefit.title}
+                      className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#0B3C5D]/30 to-transparent"></div>
+                    
+                    {/* Floating Icon */}
+                    <div className="absolute top-8 left-8 w-20 h-20 bg-gradient-to-br from-[#0B3C5D] to-[#1F6AE1] rounded-2xl flex items-center justify-center shadow-2xl">
+                      <benefit.icon className="w-10 h-10 text-white" />
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold">{benefit.title}</h3>
                 </div>
-                
-                <div className="p-8">
-                  <ul className="space-y-3">
+
+                {/* Content */}
+                <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
+                  <h3 className="text-4xl font-bold text-[#0B3C5D] mb-8">{benefit.title}</h3>
+                  <ul className="space-y-5">
                     {benefit.items.map((item, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <CheckCircle className="w-5 h-5 text-[#1F6AE1] mt-0.5 mr-3 flex-shrink-0" />
-                        <span className="text-gray-600">{item}</span>
+                      <li key={idx} className="flex items-start group">
+                        <div className="w-10 h-10 bg-gradient-to-br from-[#1F6AE1] to-[#0B3C5D] rounded-xl flex items-center justify-center mr-5 flex-shrink-0 group-hover:scale-110 transition-transform shadow-lg">
+                          <CheckCircle className="w-6 h-6 text-white" />
+                        </div>
+                        <span className="text-gray-700 text-lg leading-relaxed pt-1">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -326,118 +310,97 @@ const PosSolutions = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#0B3C5D] mb-4">Simple Pricing</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose the plan that fits your business needs
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div 
-                key={index}
-                className={`bg-white rounded-2xl p-8 border-2 ${plan.popular ? 'border-[#1F6AE1] shadow-xl' : 'border-gray-200'} relative hover:shadow-xl transition-shadow`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#F5B700] text-white px-4 py-1 rounded-full font-bold text-sm">
-                    Most Popular
-                  </div>
-                )}
-                
-                <h3 className="text-2xl font-bold text-[#1A1A1A] mb-2">{plan.name}</h3>
-                
-                <div className="mb-4">
-                  <span className="text-4xl font-bold text-[#0B3C5D]">{plan.price}</span>
-                  <span className="text-gray-600 ml-2">{plan.period}</span>
-                </div>
-                
-                <p className="text-gray-600 mb-8">{plan.description}</p>
-                
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-600">
-                      <CheckCircle className="w-5 h-5 text-[#1F6AE1] mr-3 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <button className={`w-full py-4 rounded-lg font-semibold transition-colors ${
-                  plan.popular
-                    ? 'bg-[#1F6AE1] text-white hover:bg-[#1558B8]'
-                    : 'bg-[#0B3C5D] text-white hover:bg-[#092f48]'
-                }`}>
-                  {plan.cta}
-                </button>
+      {/* Commission Structure */}
+      <section className="py-28 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-block bg-[#F5F7FA] px-6 py-2 rounded-full mb-6">
+                <span className="text-sm font-semibold text-[#0B3C5D]">Earnings</span>
               </div>
-            ))}
-          </div>
+              <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">Commission Structure</h2>
+              <p className="text-xl text-gray-600">Competitive rates across all services</p>
+            </div>
 
-          {/* Commission Info */}
-          <div className="mt-20 bg-[#F5F7FA] rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-center text-[#0B3C5D] mb-8">
-              Commission Structure
-            </h3>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-[#0B3C5D] mb-2">1-3%</div>
-                <div className="text-gray-600 text-sm">Airtime Sales</div>
+            <div className="bg-gradient-to-br from-[#F5F7FA] to-white rounded-3xl p-12 border-2 border-gray-100 shadow-xl">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
+                <div className="text-center group">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#0B3C5D] to-[#1F6AE1] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                    <Smartphone className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="text-4xl font-bold text-[#0B3C5D] mb-3">1-3%</div>
+                  <div className="text-gray-600 font-medium">Airtime Sales</div>
+                </div>
+                <div className="text-center group">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#1F6AE1] to-[#0B3C5D] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                    <Zap className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="text-4xl font-bold text-[#0B3C5D] mb-3">0.5-2%</div>
+                  <div className="text-gray-600 font-medium">Electricity Bills</div>
+                </div>
+                <div className="text-center group">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#0B3C5D] to-[#1F6AE1] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                    <Tablet className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="text-4xl font-bold text-[#0B3C5D] mb-3">1-2%</div>
+                  <div className="text-gray-600 font-medium">DSTV Payments</div>
+                </div>
+                <div className="text-center group">
+                  <div className="w-20 h-20 bg-gradient-to-br from-[#1F6AE1] to-[#0B3C5D] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
+                    <Globe className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="text-4xl font-bold text-[#0B3C5D] mb-3">2-4%</div>
+                  <div className="text-gray-600 font-medium">Data Bundles</div>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-[#0B3C5D] mb-2">0.5-2%</div>
-                <div className="text-gray-600 text-sm">Electricity Bills</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-[#0B3C5D] mb-2">1-2%</div>
-                <div className="text-gray-600 text-sm">DSTV Payments</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-[#0B3C5D] mb-2">2-4%</div>
-                <div className="text-gray-600 text-sm">Data Bundles</div>
+              
+              <div className="mt-10 text-center">
+                <p className="text-gray-600 text-lg">
+                  <Sparkles className="w-5 h-5 inline-block text-[#F5B700] mr-2" />
+                  Higher commission rates available for high-volume agents
+                </p>
               </div>
             </div>
-            
-            <p className="text-center text-gray-600 text-sm mt-6">
-              *Higher commission rates available for high-volume agents
-            </p>
           </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="py-24 bg-[#F5F7FA]">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#0B3C5D] mb-4">Success Stories</h2>
-            <p className="text-lg text-gray-600">Hear from our satisfied customers</p>
+      <section className="py-28 bg-gradient-to-br from-[#F5F7FA] to-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20">
+            <div className="inline-block bg-white px-6 py-2 rounded-full mb-6 shadow-sm">
+              <span className="text-sm font-semibold text-[#0B3C5D]">Success Stories</span>
+            </div>
+            <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">What Our Clients Say</h2>
+            <p className="text-xl text-gray-600">Real results from real businesses</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg">
-                <div className="flex mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star 
-                      key={i} 
-                      className={`w-5 h-5 ${i < testimonial.rating ? 'text-[#F5B700] fill-[#F5B700]' : 'text-gray-300'}`}
-                    />
-                  ))}
-                </div>
-                
-                <p className="text-gray-700 mb-6 leading-relaxed">"{testimonial.content}"</p>
-                
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-[#0B3C5D] rounded-full flex items-center justify-center text-white font-bold mr-4">
-                    {testimonial.name.split(' ').map(n => n[0]).join('')}
+              <div key={index} className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+                <div className="p-10">
+                  <div className="flex mb-6">
+                    {[...Array(5)].map((_, i) => (
+                      <Star 
+                        key={i} 
+                        className={`w-6 h-6 ${i < testimonial.rating ? 'text-[#F5B700] fill-[#F5B700]' : 'text-gray-300'}`}
+                      />
+                    ))}
                   </div>
-                  <div>
-                    <p className="font-bold text-[#1A1A1A]">{testimonial.name}</p>
-                    <p className="text-gray-600 text-sm">{testimonial.business}</p>
+                  
+                  <p className="text-gray-700 mb-8 leading-relaxed text-lg">"{testimonial.content}"</p>
+                  
+                  <div className="flex items-center">
+                    <img 
+                      src={testimonial.image} 
+                      alt={testimonial.name}
+                      className="w-16 h-16 rounded-2xl object-cover mr-4 shadow-lg"
+                    />
+                    <div>
+                      <p className="font-bold text-[#1A1A1A] text-lg">{testimonial.name}</p>
+                      <p className="text-[#1F6AE1] font-medium">{testimonial.business}</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -447,55 +410,38 @@ const PosSolutions = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl font-bold text-center text-[#0B3C5D] mb-12">
-              Frequently Asked Questions
-            </h2>
+      <section className="py-28 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-block bg-[#F5F7FA] px-6 py-2 rounded-full mb-6">
+                <span className="text-sm font-semibold text-[#0B3C5D]">FAQ</span>
+              </div>
+              <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-xl text-gray-600">Everything you need to know</p>
+            </div>
             
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div key={index} className="border border-gray-200 rounded-xl overflow-hidden">
+                <div key={index} className="bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:border-[#1F6AE1] transition-colors">
                   <button
-                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-[#F5F7FA] transition-colors"
+                    className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-[#F5F7FA] transition-colors"
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
                   >
-                    <span className="font-semibold text-lg text-[#1A1A1A] pr-4">
+                    <span className="font-bold text-xl text-[#1A1A1A] pr-4">
                       {faq.question}
                     </span>
-                    <ChevronDown className={`w-5 h-5 text-[#1F6AE1] flex-shrink-0 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`w-6 h-6 text-[#1F6AE1] flex-shrink-0 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} />
                   </button>
                   {openFaq === index && (
-                    <div className="px-6 pb-4 text-gray-600">
+                    <div className="px-8 pb-6 text-gray-600 text-lg leading-relaxed">
                       {faq.answer}
                     </div>
                   )}
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 bg-[#0B3C5D] text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Start Your POS Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-10">
-              Join thousands of successful agents and merchants using Xash POS
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-[#1F6AE1] text-white px-10 py-5 rounded-lg hover:bg-[#1558B8] transition-all duration-300 font-semibold text-lg">
-                Start Free Trial
-              </button>
-              <button className="bg-transparent border-2 border-white text-white px-10 py-5 rounded-lg hover:bg-white hover:text-[#0B3C5D] transition-all duration-300 font-semibold text-lg">
-                Schedule Demo
-              </button>
             </div>
           </div>
         </div>

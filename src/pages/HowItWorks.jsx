@@ -9,7 +9,8 @@ import {
   ArrowRight,
   CheckCircle,
   Shield,
-  ChevronDown
+  ChevronDown,
+  Sparkles
 } from 'lucide-react';
 
 const HowItWorks = () => {
@@ -19,6 +20,8 @@ const HowItWorks = () => {
     {
       icon: CreditCard,
       title: 'POS Solutions',
+      gradient: 'from-[#0B3C5D] to-[#1F6AE1]',
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
       steps: [
         { num: '01', title: 'Sign Up & Register', desc: 'Create your merchant account and complete verification' },
         { num: '02', title: 'Hardware Setup', desc: 'Get your POS device or install our mobile app' },
@@ -29,6 +32,8 @@ const HowItWorks = () => {
     {
       icon: Smartphone,
       title: 'Bill Payments',
+      gradient: 'from-[#1F6AE1] to-[#0B3C5D]',
+      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80',
       steps: [
         { num: '01', title: 'Customer Identification', desc: 'Customer provides bill details or account number' },
         { num: '02', title: 'Payment Processing', desc: 'Select payment method and complete transaction' },
@@ -39,6 +44,8 @@ const HowItWorks = () => {
     {
       icon: BarChart3,
       title: 'Financial Software',
+      gradient: 'from-[#0B3C5D] to-[#1F6AE1]',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
       steps: [
         { num: '01', title: 'System Assessment', desc: 'Evaluate your current financial processes' },
         { num: '02', title: 'Setup & Integration', desc: 'Configure software and integrate with systems' },
@@ -57,7 +64,8 @@ const HowItWorks = () => {
         '24/7 transaction capability',
         'Real-time commission tracking',
         'Comprehensive training'
-      ]
+      ],
+      image: 'https://images.unsplash.com/photo-1556740758-90de374c12ad?w=800&q=80'
     },
     {
       title: 'For Business Users',
@@ -67,7 +75,8 @@ const HowItWorks = () => {
         'Multi-currency support',
         'Real-time reporting',
         'API integration'
-      ]
+      ],
+      image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80'
     },
     {
       title: 'For End Customers',
@@ -77,7 +86,8 @@ const HowItWorks = () => {
         'Multiple payment options',
         'Digital receipts',
         'Secure transactions'
-      ]
+      ],
+      image: 'https://images.unsplash.com/photo-1556742393-d75f468bfcb0?w=800&q=80'
     }
   ];
 
@@ -107,61 +117,89 @@ const HowItWorks = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-[#0B3C5D] text-white overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden opacity-10">
-          <div className="absolute -top-20 -right-20 w-96 h-96 bg-[#1F6AE1] rounded-full blur-3xl"></div>
-          <div className="absolute top-1/2 -left-20 w-96 h-96 bg-[#F5B700] rounded-full blur-3xl"></div>
+      <section className="relative bg-gradient-to-br from-[#0B3C5D] via-[#0B3C5D] to-[#1F6AE1] text-white overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden opacity-30">
+          <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-[#1F6AE1] rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-1/3 -left-40 w-[500px] h-[500px] bg-[#F5B700] rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
         </div>
 
-        <div className="container mx-auto px-4 py-24 lg:py-32 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              How It Works
+        <div className="container mx-auto px-6 py-28 lg:py-40 relative z-10">
+          <div className="max-w-5xl mx-auto text-center">
+            <div className="inline-flex items-center bg-white/10 backdrop-blur-md px-5 py-2.5 rounded-full mb-8 border border-white/20">
+              <Sparkles className="w-4 h-4 text-[#F5B700] mr-2" />
+              <span className="text-sm font-medium">Simple, Transparent Processes</span>
+            </div>
+
+            <h1 className="text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+              How It 
+              <span className="block bg-gradient-to-r from-[#F5B700] to-white bg-clip-text  mt-2">
+                Works
+              </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
+
+            <p className="text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
               Simple, transparent processes for all our financial solutions. Get started quickly and start earning or saving today.
             </p>
           </div>
         </div>
 
         <div className="absolute bottom-0 left-0 right-0">
-          <svg className="w-full h-16 md:h-24" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <svg className="w-full h-20 md:h-32" viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
             <path d="M0,64 C360,100 720,40 1080,70 C1440,100 1440,120 1440,120 L0,120 Z" fill="white"/>
           </svg>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#0B3C5D] mb-4">Our Services</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose the service that fits your needs
+      <section className="py-28 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20">
+            <div className="inline-block bg-[#F5F7FA] px-6 py-2 rounded-full mb-6">
+              <span className="text-sm font-semibold text-[#0B3C5D]">Our Services</span>
+            </div>
+            <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">Step-by-Step Process</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choose the service that fits your needs and follow our simple process
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="space-y-32 max-w-7xl mx-auto">
             {services.map((service, index) => (
-              <div key={index} className="bg-[#F5F7FA] rounded-2xl p-8 hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-[#0B3C5D] rounded-xl flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-                
-                <h3 className="text-2xl font-bold text-[#1A1A1A] mb-8">{service.title}</h3>
-                
-                <div className="space-y-6">
-                  {service.steps.map((step, idx) => (
-                    <div key={idx} className="flex items-start">
-                      <div className="w-10 h-10 bg-[#1F6AE1] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0 mr-4">
-                        {step.num}
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-[#1A1A1A] mb-1">{step.title}</h4>
-                        <p className="text-gray-600 text-sm">{step.desc}</p>
-                      </div>
+              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+                {/* Image */}
+                <div className={`relative ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+                  <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#0B3C5D]/30 to-transparent"></div>
+                    
+                    {/* Floating Icon */}
+                    <div className={`absolute top-8 left-8 w-20 h-20 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center shadow-2xl`}>
+                      <service.icon className="w-10 h-10 text-white" />
                     </div>
-                  ))}
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
+                  <h3 className="text-4xl font-bold text-[#0B3C5D] mb-10">{service.title}</h3>
+                  
+                  <div className="space-y-6">
+                    {service.steps.map((step, idx) => (
+                      <div key={idx} className="flex items-start group">
+                        <div className={`w-14 h-14 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center text-white font-bold text-lg flex-shrink-0 mr-5 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
+                          {step.num}
+                        </div>
+                        <div className="pt-1">
+                          <h4 className="font-bold text-[#1A1A1A] text-xl mb-2">{step.title}</h4>
+                          <p className="text-gray-600 leading-relaxed text-lg">{step.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
@@ -169,28 +207,83 @@ const HowItWorks = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-24 bg-[#F5F7FA]">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#0B3C5D] mb-4">Who Benefits</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our solutions are designed for everyone
+      {/* Getting Started */}
+      <section className="py-28 bg-gradient-to-br from-[#F5F7FA] to-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-20">
+              <div className="inline-block bg-white px-6 py-2 rounded-full mb-6 shadow-sm">
+                <span className="text-sm font-semibold text-[#0B3C5D]">Quick Start</span>
+              </div>
+              <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">Getting Started is Easy</h2>
+              <p className="text-xl text-gray-600">
+                Follow these simple steps to begin your journey
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+              {[
+                { icon: UserPlus, title: 'Register', desc: 'Create your account in minutes' },
+                { icon: Settings, title: 'Setup', desc: 'Configure your system easily' },
+                { icon: CreditCard, title: 'Transact', desc: 'Start processing payments' },
+                { icon: TrendingUp, title: 'Earn', desc: 'Track and withdraw commissions' }
+              ].map((step, index) => (
+                <div key={index} className="text-center group">
+                  <div className="relative mb-8">
+                    <div className="w-28 h-28 bg-gradient-to-br from-[#0B3C5D] to-[#1F6AE1] rounded-2xl flex items-center justify-center mx-auto shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
+                      <step.icon className="w-14 h-14 text-white" />
+                    </div>
+                    {index < 3 && (
+                      <div className="hidden lg:block absolute top-14 left-[calc(50%+3.5rem)] w-[calc(100%-3.5rem)] h-1 bg-gradient-to-r from-[#0B3C5D] to-[#1F6AE1] opacity-20"></div>
+                    )}
+                  </div>
+                  <h3 className="font-bold text-[#1A1A1A] text-xl mb-3">{step.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{step.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section with Images */}
+      <section className="py-28 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20">
+            <div className="inline-block bg-[#F5F7FA] px-6 py-2 rounded-full mb-6">
+              <span className="text-sm font-semibold text-[#0B3C5D]">Who Benefits</span>
+            </div>
+            <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">Solutions for Everyone</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our platform is designed to benefit all stakeholders
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <div className="bg-[#0B3C5D] p-6 text-white">
-                  <h3 className="text-xl font-bold">{benefit.title}</h3>
+              <div key={index} className="group bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+                {/* Image */}
+                <div className="relative h-64 overflow-hidden">
+                  <img 
+                    src={benefit.image} 
+                    alt={benefit.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B3C5D]/80 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <h3 className="text-2xl font-bold text-white">{benefit.title}</h3>
+                  </div>
                 </div>
+
+                {/* Content */}
                 <div className="p-8">
-                  <ul className="space-y-3">
+                  <ul className="space-y-4">
                     {benefit.items.map((item, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <CheckCircle className="w-5 h-5 text-[#1F6AE1] mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-600">{item}</span>
+                      <li key={idx} className="flex items-start group/item">
+                        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#1F6AE1] to-[#0B3C5D] flex items-center justify-center mr-3 flex-shrink-0 group-hover/item:scale-110 transition-transform">
+                          <CheckCircle className="w-5 h-5 text-white" />
+                        </div>
+                        <span className="text-gray-700 leading-relaxed pt-0.5">{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -201,35 +294,29 @@ const HowItWorks = () => {
         </div>
       </section>
 
-      {/* Getting Started */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
+      {/* Key Stats */}
+      <section className="py-28 bg-gradient-to-br from-[#F5F7FA] to-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-[#0B3C5D] mb-4">Getting Started is Easy</h2>
-              <p className="text-lg text-gray-600">
-                Follow these simple steps to begin your journey
-              </p>
+              <div className="inline-block bg-white px-6 py-2 rounded-full mb-6 shadow-sm">
+                <span className="text-sm font-semibold text-[#0B3C5D]">Our Performance</span>
+              </div>
+              <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">By The Numbers</h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               {[
-                { icon: UserPlus, title: 'Register', desc: 'Create your account' },
-                { icon: Settings, title: 'Setup', desc: 'Configure your system' },
-                { icon: CreditCard, title: 'Transact', desc: 'Start processing' },
-                { icon: TrendingUp, title: 'Earn', desc: 'Track and withdraw' }
-              ].map((step, index) => (
-                <div key={index} className="text-center">
-                  <div className="relative mb-6">
-                    <div className="w-20 h-20 bg-[#0B3C5D] rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto">
-                      <step.icon className="w-10 h-10" />
-                    </div>
-                    {index < 3 && (
-                      <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gray-200"></div>
-                    )}
+                { value: '24h', label: 'Quick Setup', desc: 'Get started in less than a day' },
+                { value: '24/7', label: 'Support Available', desc: 'Round-the-clock assistance' },
+                { value: '99.9%', label: 'System Uptime', desc: 'Reliable service always' }
+              ].map((stat, index) => (
+                <div key={index} className="text-center bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                  <div className="text-6xl font-bold bg-gradient-to-r from-[#0B3C5D] to-[#1F6AE1] bg-clip-text  mb-4">
+                    {stat.value}
                   </div>
-                  <h3 className="font-bold text-[#1A1A1A] text-lg mb-2">{step.title}</h3>
-                  <p className="text-gray-600 text-sm">{step.desc}</p>
+                  <div className="text-xl font-bold text-[#1A1A1A] mb-2">{stat.label}</div>
+                  <p className="text-gray-600">{stat.desc}</p>
                 </div>
               ))}
             </div>
@@ -238,71 +325,38 @@ const HowItWorks = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-24 bg-[#F5F7FA]">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl font-bold text-center text-[#0B3C5D] mb-12">
-              Frequently Asked Questions
-            </h2>
+      <section className="py-28 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-block bg-[#F5F7FA] px-6 py-2 rounded-full mb-6">
+                <span className="text-sm font-semibold text-[#0B3C5D]">FAQ</span>
+              </div>
+              <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-xl text-gray-600">Everything you need to know to get started</p>
+            </div>
             
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div key={index} className="border border-gray-200 rounded-xl overflow-hidden bg-white">
+                <div key={index} className="bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:border-[#1F6AE1] transition-colors">
                   <button
-                    className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-[#F5F7FA] transition-colors"
+                    className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-[#F5F7FA] transition-colors"
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
                   >
-                    <span className="font-semibold text-lg text-[#1A1A1A] pr-4">
+                    <span className="font-bold text-xl text-[#1A1A1A] pr-4">
                       {faq.question}
                     </span>
-                    <ChevronDown className={`w-5 h-5 text-[#1F6AE1] flex-shrink-0 transition-transform ${openFaq === index ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`w-6 h-6 text-[#1F6AE1] flex-shrink-0 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} />
                   </button>
                   {openFaq === index && (
-                    <div className="px-6 pb-4 text-gray-600">
+                    <div className="px-8 pb-6 text-gray-600 text-lg leading-relaxed">
                       {faq.answer}
                     </div>
                   )}
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-24 bg-[#0B3C5D] text-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-10">
-              Join thousands of users already benefiting from our services
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-[#1F6AE1] text-white px-10 py-5 rounded-lg hover:bg-[#1558B8] transition-all duration-300 font-semibold text-lg flex items-center justify-center group">
-                Sign Up Free
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="bg-transparent border-2 border-white text-white px-10 py-5 rounded-lg hover:bg-white hover:text-[#0B3C5D] transition-all duration-300 font-semibold text-lg">
-                Contact Sales
-              </button>
-            </div>
-
-            <div className="mt-12 grid grid-cols-3 gap-6 max-w-2xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-[#F5B700] mb-2">24h</div>
-                <div className="text-sm text-gray-300">Quick Setup</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-[#F5B700] mb-2">24/7</div>
-                <div className="text-sm text-gray-300">Support</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-[#F5B700] mb-2">99.9%</div>
-                <div className="text-sm text-gray-300">Uptime</div>
-              </div>
             </div>
           </div>
         </div>

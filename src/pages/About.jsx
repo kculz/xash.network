@@ -54,35 +54,48 @@ const About = () => {
         </div>
 
         <div className="container mx-auto px-4 py-24 lg:py-32 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center bg-white bg-opacity-10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-white border-opacity-20">
-              <span className="text-sm">Since 2018</span>
-            </div>
-            
-            <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              About Xash.network
-            </h1>
-            
-            <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-              We're building the financial infrastructure that enables businesses and individuals to thrive through accessible, reliable, and innovative payment solutions.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center bg-white bg-opacity-10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-white border-opacity-20">
+                <span className="text-sm">Since 2018</span>
+              </div>
+              
+              <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                About Xash.network
+              </h1>
+              
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                We're building the financial infrastructure that enables businesses and individuals to thrive through accessible, reliable, and innovative payment solutions.
+              </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
-              <div className="text-center p-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-xl">
-                <div className="text-3xl font-bold text-[#F5B700]">5+</div>
-                <div className="text-sm text-gray-300">Years</div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-center p-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-xl">
+                  <div className="text-3xl font-bold text-[#F5B700]">5+</div>
+                  <div className="text-sm text-gray-300">Years</div>
+                </div>
+                <div className="text-center p-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-xl">
+                  <div className="text-3xl font-bold text-[#F5B700]">10K+</div>
+                  <div className="text-sm text-gray-300">Agents</div>
+                </div>
+                <div className="text-center p-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-xl">
+                  <div className="text-3xl font-bold text-[#F5B700]">3</div>
+                  <div className="text-sm text-gray-300">Countries</div>
+                </div>
+                <div className="text-center p-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-xl">
+                  <div className="text-3xl font-bold text-[#F5B700]">24/7</div>
+                  <div className="text-sm text-gray-300">Support</div>
+                </div>
               </div>
-              <div className="text-center p-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-xl">
-                <div className="text-3xl font-bold text-[#F5B700]">10K+</div>
-                <div className="text-sm text-gray-300">Agents</div>
-              </div>
-              <div className="text-center p-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-xl">
-                <div className="text-3xl font-bold text-[#F5B700]">3</div>
-                <div className="text-sm text-gray-300">Countries</div>
-              </div>
-              <div className="text-center p-4 bg-white bg-opacity-10 backdrop-blur-sm rounded-xl">
-                <div className="text-3xl font-bold text-[#F5B700]">24/7</div>
-                <div className="text-sm text-gray-300">Support</div>
+            </div>
+
+            {/* Hero Image */}
+            <div className="hidden lg:block">
+              <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-3xl p-8 border border-white border-opacity-20">
+                <img 
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=800&fit=crop" 
+                  alt="Team collaboration" 
+                  className="w-full h-full object-cover rounded-2xl"
+                />
               </div>
             </div>
           </div>
@@ -95,7 +108,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission & Vision */}
+      {/* Mission & Vision with Images */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -106,6 +119,14 @@ const About = () => {
                 </div>
                 <h2 className="text-3xl font-bold text-[#0B3C5D]">Our Mission</h2>
               </div>
+              
+              {/* Mission Image */}
+              <img 
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=450&fit=crop" 
+                alt="Team collaboration" 
+                className="mb-6 w-full aspect-video object-cover rounded-xl"
+              />
+              
               <p className="text-gray-700 text-lg mb-6">
                 To democratize access to financial services by providing affordable, reliable, and innovative payment solutions that empower businesses and individuals across Africa.
               </p>
@@ -132,6 +153,14 @@ const About = () => {
                 </div>
                 <h2 className="text-3xl font-bold text-[#0B3C5D]">Our Vision</h2>
               </div>
+              
+              {/* Vision Image */}
+              <img 
+                src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=450&fit=crop" 
+                alt="Business growth" 
+                className="mb-6 w-full aspect-video object-cover rounded-xl"
+              />
+              
               <p className="text-gray-700 text-lg mb-6">
                 To become Africa's leading financial technology platform, connecting millions of users to essential services and creating economic opportunities.
               </p>
@@ -202,7 +231,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Office Location */}
+      {/* Office Location with Image */}
       <section className="py-24 bg-[#F5F7FA]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -210,12 +239,22 @@ const About = () => {
             <p className="text-lg text-gray-600">Our headquarters in Mutare, Zimbabwe</p>
           </div>
 
-          <div className="max-w-4xl mx-auto bg-white rounded-2xl p-8 shadow-lg">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Office Image */}
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop" 
+                  alt="Office building" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Contact Info */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
                 <h3 className="text-2xl font-bold text-[#0B3C5D] mb-6">Contact Information</h3>
                 
-                <div className="space-y-4">
+                <div className="space-y-6 mb-8">
                   <div className="flex items-start">
                     <MapPin className="w-5 h-5 text-[#1F6AE1] mt-1 mr-3 flex-shrink-0" />
                     <div>
@@ -240,22 +279,22 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div>
-                <h3 className="text-2xl font-bold text-[#0B3C5D] mb-6">Office Hours</h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between py-2 border-b border-gray-200">
-                    <span className="text-gray-600">Monday - Friday</span>
-                    <span className="font-semibold">8:00 AM - 5:00 PM</span>
-                  </div>
-                  <div className="flex justify-between py-2 border-b border-gray-200">
-                    <span className="text-gray-600">Saturday</span>
-                    <span className="font-semibold">9:00 AM - 1:00 PM</span>
-                  </div>
-                  <div className="flex justify-between py-2">
-                    <span className="text-gray-600">Sunday</span>
-                    <span className="font-semibold">Closed</span>
+                <div className="pt-6 border-t border-gray-200">
+                  <h4 className="font-bold text-[#1A1A1A] mb-4">Office Hours</h4>
+                  <div className="space-y-2">
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Mon - Fri</span>
+                      <span className="font-semibold">8:00 AM - 5:00 PM</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Saturday</span>
+                      <span className="font-semibold">9:00 AM - 1:00 PM</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Sunday</span>
+                      <span className="font-semibold">Closed</span>
+                    </div>
                   </div>
                 </div>
               </div>

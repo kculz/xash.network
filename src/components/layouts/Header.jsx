@@ -22,19 +22,19 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-[#ffffff] shadow-sm border-b border-gray-200">
-      <div className="container mx-auto px-4 py-4">
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
+      <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-[#0B3C5D] rounded-lg flex items-center justify-center">
-              <span className="text-[#ffffff] font-bold text-xl">X</span>
+            <div className="w-11 h-11 bg-gradient-to-br from-[#0B3C5D] to-[#1F6AE1] rounded-xl flex items-center justify-center shadow-lg shadow-[#0B3C5D]/20">
+              <span className="text-white font-bold text-xl">X</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-[#0B3C5D]">
+              <h1 className="text-xl font-bold bg-gradient-to-r from-[#0B3C5D] to-[#1F6AE1] bg-clip-text ">
                 Xash.network
               </h1>
-              <p className="text-xs text-[#1A1A1A]">Financial Solutions</p>
+              <p className="text-xs text-gray-500 font-medium">Financial Solutions</p>
             </div>
           </div>
 
@@ -45,19 +45,21 @@ const Header = () => {
                 {item.dropdown ? (
                   <>
                     <button 
-                      className="flex items-center text-[#1A1A1A] hover:text-[#0B3C5D] transition-colors font-medium px-4 py-2 rounded-lg hover:bg-[#F5F7FA]"
+                      className="flex items-center text-[#1A1A1A] hover:text-[#0B3C5D] transition-all duration-300 font-medium px-4 py-2.5 rounded-xl hover:bg-[#F5F7FA]"
                     >
                       {item.name}
-                      <ChevronDown className="ml-1 w-4 h-4" />
+                      <ChevronDown className="ml-1.5 w-4 h-4 transition-transform group-hover:rotate-180 duration-300" />
                     </button>
-                    <div className="absolute left-0 mt-2 w-64 bg-[#ffffff] rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-200">
-                      {item.dropdown.map((subItem) => (
+                    <div className="absolute left-0 mt-2 w-72 bg-white rounded-2xl shadow-2xl opacity-0  group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100 overflow-hidden">
+                      {item.dropdown.map((subItem, index) => (
                         <a
                           key={subItem.name}
                           href={subItem.href}
-                          className="flex items-center px-4 py-3 text-[#1A1A1A] hover:bg-[#F5F7FA] hover:text-[#0B3C5D] transition-colors first:rounded-t-lg last:rounded-b-lg"
+                          className="flex items-center px-5 py-4 text-[#1A1A1A] hover:bg-gradient-to-r hover:from-[#F5F7FA] hover:to-[#E8F0FE] hover:text-[#0B3C5D] transition-all duration-200 group/item border-b border-gray-50 last:border-b-0"
                         >
-                          <subItem.icon className="w-4 h-4 mr-3 text-[#0B3C5D]" />
+                          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0B3C5D]/10 to-[#1F6AE1]/10 flex items-center justify-center mr-3 group-hover/item:scale-110 transition-transform duration-200">
+                            <subItem.icon className="w-5 h-5 text-[#0B3C5D]" />
+                          </div>
                           <span className="font-medium text-sm">{subItem.name}</span>
                         </a>
                       ))}
@@ -66,21 +68,18 @@ const Header = () => {
                 ) : (
                   <a
                     href={item.href}
-                    className="text-[#1A1A1A] hover:text-[#0B3C5D] transition-colors font-medium px-4 py-2 rounded-lg hover:bg-[#F5F7FA]"
+                    className="text-[#1A1A1A] hover:text-[#0B3C5D] transition-all duration-300 font-medium px-4 py-2.5 rounded-xl hover:bg-[#F5F7FA]"
                   >
                     {item.name}
                   </a>
                 )}
               </div>
             ))}
-            <button className="bg-[#0B3C5D] text-[#ffffff] px-6 py-2 rounded-lg hover:bg-[#1F6AE1] transition-all font-medium ml-4">
-              Get Started
-            </button>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-[#1A1A1A] hover:text-[#0B3C5D] transition-colors"
+            className="md:hidden text-[#1A1A1A] hover:text-[#0B3C5D] transition-colors p-2 hover:bg-[#F5F7FA] rounded-xl"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -90,28 +89,30 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4">
-            <div className="flex flex-col space-y-2 bg-[#ffffff] rounded-lg p-4 shadow-lg border border-gray-200">
+            <div className="flex flex-col space-y-1 bg-white rounded-2xl p-4 shadow-2xl border border-gray-100">
               {navItems.map((item) => (
                 <div key={item.name}>
                   {item.dropdown ? (
                     <div className="space-y-2">
                       <button 
-                        className="flex items-center justify-between w-full text-[#1A1A1A] font-medium py-2"
+                        className="flex items-center justify-between w-full text-[#1A1A1A] font-medium py-3 px-3 hover:bg-[#F5F7FA] rounded-xl transition-all"
                         onClick={() => setSolutionsOpen(!solutionsOpen)}
                       >
                         {item.name}
-                        <ChevronDown className={`w-4 h-4 transition-transform ${solutionsOpen ? 'rotate-180' : ''}`} />
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${solutionsOpen ? 'rotate-180' : ''}`} />
                       </button>
                       {solutionsOpen && (
-                        <div className="pl-4 space-y-2 bg-[#F5F7FA] rounded-lg p-3">
+                        <div className="pl-2 space-y-1 bg-[#F5F7FA] rounded-xl p-3">
                           {item.dropdown.map((subItem) => (
                             <a
                               key={subItem.name}
                               href={subItem.href}
-                              className="flex items-center py-2 text-[#1A1A1A] hover:text-[#0B3C5D] rounded-lg px-2 hover:bg-[#ffffff] transition-colors"
+                              className="flex items-center py-3 px-3 text-[#1A1A1A] hover:text-[#0B3C5D] rounded-xl hover:bg-white transition-all"
                               onClick={() => setIsMenuOpen(false)}
                             >
-                              <subItem.icon className="w-4 h-4 mr-3 text-[#0B3C5D]" />
+                              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#0B3C5D]/10 to-[#1F6AE1]/10 flex items-center justify-center mr-3">
+                                <subItem.icon className="w-4 h-4 text-[#0B3C5D]" />
+                              </div>
                               <span className="font-medium text-sm">{subItem.name}</span>
                             </a>
                           ))}
@@ -121,7 +122,7 @@ const Header = () => {
                   ) : (
                     <a
                       href={item.href}
-                      className="block py-2 text-[#1A1A1A] hover:text-[#0B3C5D] font-medium transition-colors"
+                      className="block py-3 px-3 text-[#1A1A1A] hover:text-[#0B3C5D] font-medium transition-all hover:bg-[#F5F7FA] rounded-xl"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
@@ -129,9 +130,6 @@ const Header = () => {
                   )}
                 </div>
               ))}
-              <button className="bg-[#0B3C5D] text-[#ffffff] px-6 py-3 rounded-lg hover:bg-[#1F6AE1] transition-all font-medium mt-2 w-full">
-                Get Started
-              </button>
             </div>
           </div>
         )}
