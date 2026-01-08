@@ -151,7 +151,7 @@ const BillPayments = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section */}
+      {/* Hero Section - Kept as is */}
       <section className="relative bg-gradient-to-br from-[#0B3C5D] via-[#0B3C5D] to-[#1F6AE1] text-white overflow-hidden">
         <div className="absolute inset-0 overflow-hidden opacity-30">
           <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-[#1F6AE1] rounded-full blur-3xl animate-pulse"></div>
@@ -239,11 +239,11 @@ const BillPayments = () => {
         </div>
       </section>
 
-      {/* Supported Bills */}
-      <section className="py-28 bg-white">
+      {/* Supported Bills - Changed to grayscale */}
+      <section className="py-28 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <div className="inline-block bg-[#F5F7FA] px-6 py-2 rounded-full mb-6">
+            <div className="inline-block bg-white/80 backdrop-blur-sm px-6 py-2 rounded-full mb-6 shadow-sm">
               <span className="text-sm font-semibold text-[#0B3C5D]">Payment Options</span>
             </div>
             <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">Supported Bill Providers</h2>
@@ -254,7 +254,7 @@ const BillPayments = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {billProviders.map((provider, index) => (
-              <div key={index} className="group bg-white rounded-3xl p-10 hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-transparent relative overflow-hidden">
+              <div key={index} className="group bg-white rounded-3xl p-10 hover:shadow-2xl transition-all duration-500 border border-gray-200 hover:border-transparent relative overflow-hidden">
                 <div className={`absolute inset-0 bg-gradient-to-br ${provider.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
                 
                 <div className="relative z-10">
@@ -272,7 +272,7 @@ const BillPayments = () => {
                   <div className="text-sm text-[#1F6AE1] font-semibold mb-4">{provider.category}</div>
                   <p className="text-gray-600 mb-8 leading-relaxed">{provider.description}</p>
                   
-                  <div className="flex items-center justify-between pt-6 border-t-2 border-gray-100">
+                  <div className="flex items-center justify-between pt-6 border-t border-gray-200">
                     <div>
                       <div className="text-xs text-gray-500 mb-1">Commission</div>
                       <div className="font-bold text-[#0B3C5D] text-lg">{provider.commission}</div>
@@ -286,8 +286,8 @@ const BillPayments = () => {
         </div>
       </section>
 
-      {/* How It Works with Image */}
-      <section className="py-28 bg-gradient-to-br from-[#F5F7FA] to-white">
+      {/* How It Works - Changed to white */}
+      <section className="py-28 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
             {/* Image Side */}
@@ -296,7 +296,7 @@ const BillPayments = () => {
                 <img 
                   src="https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&q=80" 
                   alt="Mobile payment process"
-                  className="w-full h-[500px] object-cover"
+                  className="w-full h-[500px] object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-[#0B3C5D]/20 to-transparent"></div>
               </div>
@@ -304,7 +304,7 @@ const BillPayments = () => {
 
             {/* Content Side */}
             <div className="order-1 lg:order-2">
-              <div className="inline-block bg-white px-6 py-2 rounded-full mb-6 shadow-sm">
+              <div className="inline-block bg-gray-50 px-6 py-2 rounded-full mb-6">
                 <span className="text-sm font-semibold text-[#0B3C5D]">Simple Process</span>
               </div>
               <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">How It Works</h2>
@@ -331,11 +331,11 @@ const BillPayments = () => {
         </div>
       </section>
 
-      {/* Features */}
-      <section className="py-28 bg-white">
+      {/* Features - Changed to grayscale */}
+      <section className="py-28 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <div className="inline-block bg-[#F5F7FA] px-6 py-2 rounded-full mb-6">
+            <div className="inline-block bg-white/80 backdrop-blur-sm px-6 py-2 rounded-full mb-6 shadow-sm">
               <span className="text-sm font-semibold text-[#0B3C5D]">Why Choose Us</span>
             </div>
             <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">Powerful Features</h2>
@@ -346,7 +346,7 @@ const BillPayments = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {features.map((feature, index) => (
-              <div key={index} className="group bg-white rounded-3xl p-10 text-center hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-transparent hover:-translate-y-2">
+              <div key={index} className="group bg-white rounded-3xl p-10 text-center hover:shadow-2xl transition-all duration-500 border border-gray-200 hover:border-transparent">
                 <div className={`w-20 h-20 bg-gradient-to-br ${feature.gradient} rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
                   <feature.icon className="w-10 h-10 text-white" />
                 </div>
@@ -358,19 +358,19 @@ const BillPayments = () => {
         </div>
       </section>
 
-      {/* Commission Structure */}
-      <section className="py-28 bg-gradient-to-br from-[#F5F7FA] to-white">
+      {/* Commission Structure - Changed to white */}
+      <section className="py-28 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-block bg-white px-6 py-2 rounded-full mb-6 shadow-sm">
+              <div className="inline-block bg-gray-50 px-6 py-2 rounded-full mb-6">
                 <span className="text-sm font-semibold text-[#0B3C5D]">Earnings</span>
               </div>
               <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">Commission Structure</h2>
               <p className="text-xl text-gray-600">Earn on every transaction you process</p>
             </div>
             
-            <div className="bg-white rounded-3xl p-12 border-2 border-gray-100 shadow-xl">
+            <div className="bg-gray-50 rounded-3xl p-12 border border-gray-200 shadow-xl">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
                 <div className="text-center group">
                   <div className="w-20 h-20 bg-gradient-to-br from-[#0B3C5D] to-[#1F6AE1] rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
@@ -413,12 +413,12 @@ const BillPayments = () => {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-28 bg-white">
+      {/* FAQ - Changed to grayscale */}
+      <section className="py-28 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-block bg-[#F5F7FA] px-6 py-2 rounded-full mb-6">
+              <div className="inline-block bg-white/80 backdrop-blur-sm px-6 py-2 rounded-full mb-6 shadow-sm">
                 <span className="text-sm font-semibold text-[#0B3C5D]">FAQ</span>
               </div>
               <h2 className="text-5xl font-bold text-[#0B3C5D] mb-6">
@@ -429,9 +429,9 @@ const BillPayments = () => {
             
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div key={index} className="bg-white border-2 border-gray-100 rounded-2xl overflow-hidden hover:border-[#1F6AE1] transition-colors">
+                <div key={index} className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-[#1F6AE1] transition-colors">
                   <button
-                    className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-[#F5F7FA] transition-colors"
+                    className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
                   >
                     <span className="font-bold text-xl text-[#1A1A1A] pr-4">
