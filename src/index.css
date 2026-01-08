@@ -5,47 +5,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply antialiased;
-    background-color: #F5F7FA;
-  }
-}
 
-/* Or you can define custom classes like this: */
-@layer components {
-  .bg-light-bg {
-    background-color: #F5F7FA;
-  }
-  
-  .text-primary-blue {
-    color: #0B3C5D;
-  }
-  
-  .bg-primary-blue {
-    background-color: #0B3C5D;
-  }
-  
-  .text-secondary-blue {
-    color: #1F6AE1;
-  }
-  
-  .bg-secondary-blue {
-    background-color: #1F6AE1;
-  }
-  
-  .text-accent-gold {
-    color: #F5B700;
-  }
-  
-  .bg-accent-gold {
-    background-color: #F5B700;
-  }
-  
-  .text-dark-text {
-    color: #1A1A1A;
-  }
-}
+
+
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
