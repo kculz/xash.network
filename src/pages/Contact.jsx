@@ -23,9 +23,9 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone Support',
-      details: '+263 78 123 4567',
+      details: '+263 77 922 2722',
       description: 'Mon-Fri: 8AM-5PM',
-      link: 'tel:+263781234567',
+      link: '+263 77 922 2722',
       gradient: 'from-[#0B3C5D] to-[#1F6AE1]'
     },
     {
@@ -39,9 +39,9 @@ const Contact = () => {
     {
       icon: MessageCircle,
       title: 'WhatsApp',
-      details: '+263 77 987 6543',
+      details: '+263 71 640 9412',
       description: '24/7 instant messaging',
-      link: 'https://wa.me/263779876543',
+      link: 'https://wa.me/263716409412',
       gradient: 'from-[#0B3C5D] to-[#1F6AE1]'
     }
   ];
@@ -105,26 +105,26 @@ const Contact = () => {
                     <Send className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
                   </span>
                 </a>
-                <a href="tel:+263781234567" className="px-8 py-5 bg-white/10 backdrop-blur-lg border-2 border-white/40 text-white rounded-2xl font-bold text-lg hover:bg-white/20 hover:border-white/60 transition-all duration-300 flex items-center justify-center">
+                <a href="+263 77 922 2722" className="px-8 py-5 bg-white/10 backdrop-blur-lg border-2 border-white/40 text-white rounded-2xl font-bold text-lg hover:bg-white/20 hover:border-white/60 transition-all duration-300 flex items-center justify-center">
                   Call Us
                 </a>
               </div>
 
               <div className="grid grid-cols-4 gap-6 pt-6 border-t border-white/20">
                 <div>
-                  <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">24/7</div>
+                  <div className="lg:text-4xl md:text-2xl text-lg font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">24/7</div>
                   <div className="text-sm text-gray-300 font-medium">Support</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">&lt;24h</div>
+                  <div className="lg:text-4xl md:text-2xl text-lg font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">&lt;24h</div>
                   <div className="text-sm text-gray-300 font-medium">Response</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">98%</div>
+                  <div className="lg:text-4xl md:text-2xl text-lg font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">98%</div>
                   <div className="text-sm text-gray-300 font-medium">Satisfaction</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">3+</div>
+                  <div className="lg:text-4xl md:text-2xl text-lg font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">3+</div>
                   <div className="text-sm text-gray-300 font-medium">Countries</div>
                 </div>
               </div>
@@ -256,7 +256,7 @@ const Contact = () => {
                 <div className="space-y-6 mb-10">
                   {[
                     { icon: MapPin, title: 'Address', content: '63 Embassy Building, Aerodrome Rd\nMutare, Zimbabwe' },
-                    { icon: Phone, title: 'Phone', content: '+263 78 123 4567', link: 'tel:+263781234567' },
+                    { icon: Phone, title: 'Phone', content: '+263 77 922 2722', link: '+263 77 922 2722' },
                     { icon: Mail, title: 'Email', content: 'info@xash.network', link: 'mailto:info@xash.network' }
                   ].map((item, index) => (
                     <div key={index} className="flex items-start group">
@@ -428,7 +428,7 @@ const Contact = () => {
                 Contact Sales
                 <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform" />
               </a>
-              <a href="tel:+263781234567" className="px-10 py-5 bg-white/10 backdrop-blur-lg border-2 border-white/30 text-white rounded-2xl font-bold text-xl hover:bg-white/20 transition-all duration-300 hover:scale-105">
+              <a href="+263 77 922 2722" className="px-10 py-5 bg-white/10 backdrop-blur-lg border-2 border-white/30 text-white rounded-2xl font-bold text-xl hover:bg-white/20 transition-all duration-300 hover:scale-105">
                 Call Now
               </a>
             </div>

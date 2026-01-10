@@ -52,11 +52,11 @@ const Footer = () => {
               Simplifying bill payments and POS solutions for businesses and individuals across the Globe.
             </p>
            <div className="space-y-4">
-              <a href="tel:+263781234567" className="flex items-center space-x-3 group">
+              <a href="+263 77 922 2722" className="flex items-center space-x-3 group">
                 <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#F5B700]/20 transition-all">
                   <Phone className="w-4 h-4 text-[#F5B700]" />
                 </div>
-                <span className="text-gray-300 text-sm group-hover:text-[#F5B700] transition-colors">+263 78 123 4567</span>
+                <span className="text-gray-300 text-sm group-hover:text-[#F5B700] transition-colors">+263 77 922 2722</span>
               </a>
               <a href="mailto:info@xash.network" className="flex items-center space-x-3 group">
                 <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#F5B700]/20 transition-all">

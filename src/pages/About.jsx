@@ -175,19 +175,19 @@ const About = () => {
 
               <div className="grid grid-cols-4 gap-6 pt-6 border-t border-white/20">
                 <div>
-                  <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">5+</div>
+                  <div className="lg:text-4xl md:text-2xl text-lg font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">5+</div>
                   <div className="text-sm text-gray-300 font-medium">Years</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">10K+</div>
+                  <div className="lg:text-4xl md:text-2xl text-lg font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">10K+</div>
                   <div className="text-sm text-gray-300 font-medium">Agents</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">3</div>
+                  <div className="lg:text-4xl md:text-2xl text-lg font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">3</div>
                   <div className="text-sm text-gray-300 font-medium">Countries</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">24/7</div>
+                  <div className="lg:text-4xl md:text-2xl text-lg font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">24/7</div>
                   <div className="text-sm text-gray-300 font-medium">Support</div>
                 </div>
               </div>
@@ -417,7 +417,7 @@ const About = () => {
                 <div className="space-y-6 mb-10">
                   {[
                     { icon: MapPin, title: 'Address', content: '63 Embassy Building, Aerodrome Rd\nMutare, Zimbabwe' },
-                    { icon: Phone, title: 'Phone', content: '+263 78 123 4567' },
+                    { icon: Phone, title: 'Phone', content: '+263 77 922 2722' },
                     { icon: Mail, title: 'Email', content: 'info@xash.network' }
                   ].map((item, index) => (
                     <div key={index} className="flex items-start group">
