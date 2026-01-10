@@ -210,15 +210,15 @@ const PosSolutions = () => {
 
               <div className="grid grid-cols-3 gap-6 pt-6 border-t border-white/20">
                 <div>
-                  <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">99.9%</div>
+                  <div className="lg:text-4xl md:text-2xl text-lg font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">99.9%</div>
                   <div className="text-sm text-gray-300 font-medium">Uptime</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">&lt;30s</div>
+                  <div className="lg:text-4xl md:text-2xl text-lg font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">&lt;30s</div>
                   <div className="text-sm text-gray-300 font-medium">Processing</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">24/7</div>
+                  <div className="lg:text-4xl md:text-2xl text-lg font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">24/7</div>
                   <div className="text-sm text-gray-300 font-medium">Support</div>
                 </div>
               </div>

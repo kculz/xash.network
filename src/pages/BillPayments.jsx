@@ -205,22 +205,20 @@ const BillPayments = () => {
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
                   </span>
                 </button>
-                <button className="px-8 py-5 bg-white/10 backdrop-blur-lg border-2 border-white/40 text-white rounded-2xl font-bold text-lg hover:bg-white/20 hover:border-white/60 transition-all duration-300 flex items-center justify-center">
-                  View Billers
-                </button>
+                
               </div>
 
               <div className="grid grid-cols-3 gap-6 pt-6 border-t border-white/20">
                 <div>
-                  <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">Instant</div>
+                  <div className="lg:text-4xl md:text-2xl text-lg font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">Instant</div>
                   <div className="text-sm text-gray-300 font-medium">Processing</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">50+</div>
+                  <div className="lg:text-4xl md:text-2xl text-lg font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">50+</div>
                   <div className="text-sm text-gray-300 font-medium">Billers</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">24/7</div>
+                  <div className="lg:text-4xl md:text-2xl text-lg font-bold mb-2 bg-gradient-to-r from-[#F5B700] to-white bg-clip-text text-transparent">24/7</div>
                   <div className="text-sm text-gray-300 font-medium">Available</div>
                 </div>
               </div>
