@@ -26,6 +26,11 @@ import {
   TrendingDown
 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
+import posRetail from '../assets/images/pos_retail.png';
+import posMobile from '../assets/images/pos_mobile.png';
+import posOwner from '../assets/images/pos_owner.png';
+import testimonialChido from '../assets/images/testimonial_chido.png';
+import testimonialTendai from '../assets/images/testimonial_tendai.png';
 
 const PosSolutions = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -80,7 +85,7 @@ const PosSolutions = () => {
         '24/7 transaction capability',
         'Detailed sales reporting'
       ],
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80'
+      image: posRetail
     },
     {
       title: 'For Mobile Agents',
@@ -92,7 +97,7 @@ const PosSolutions = () => {
         'Flexible working hours',
         'Real-time commission tracking'
       ],
-      image: 'https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&q=80'
+      image: posMobile
     },
     {
       title: 'For Business Owners',
@@ -104,7 +109,7 @@ const PosSolutions = () => {
         'Scalable as business grows',
         'API integration options'
       ],
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80'
+      image: posOwner
     }
   ];
 
@@ -114,14 +119,14 @@ const PosSolutions = () => {
       business: 'Corner Store, Harare',
       content: 'Since adding Xash POS, our daily revenue increased by 40%. Bill payments bring customers in daily.',
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&q=80'
+      image: testimonialChido
     },
     {
       name: 'Tendai K.',
       business: 'Mobile Agent, Bulawayo',
       content: 'The mobile app makes it easy to process transactions anywhere. Commissions are paid on time.',
       rating: 5,
-      image: 'https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=200&q=80'
+      image: testimonialTendai
     }
   ];
 
@@ -193,7 +198,7 @@ const PosSolutions = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-5 pt-4">
-                <a href="https://wa.me/263716409412">
+                <a href="tel:0782026070">
                   <button className="group relative px-8 py-5 bg-[#F5B700] text-[#0B3C5D] rounded-2xl font-bold text-lg overflow-hidden shadow-2xl hover:shadow-[#F5B700]/50 transition-all duration-300 hover:scale-105">
                     <span className="relative z-10 flex items-center justify-center">
                       Start Earning Today

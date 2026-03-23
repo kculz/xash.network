@@ -22,6 +22,10 @@ import {
   Zap
 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
+import financialSmallBusiness from '../assets/images/financial_small_business.png';
+import financialEnterprise from '../assets/images/financial_enterprise.png';
+import financialDeveloper from '../assets/images/financial_developer.png';
+import financialApi from '../assets/images/financial_api.png';
 
 const FinancialSoftware = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -76,7 +80,7 @@ const FinancialSoftware = () => {
         'Mobile app access',
         'POS integration'
       ],
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80'
+      image: financialSmallBusiness
     },
     {
       title: 'For Enterprises',
@@ -88,7 +92,7 @@ const FinancialSoftware = () => {
         'SLA guarantees',
         'Dedicated support team'
       ],
-      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80'
+      image: financialEnterprise
     },
     {
       title: 'For Developers',
@@ -100,7 +104,7 @@ const FinancialSoftware = () => {
         'SDKs for major languages',
         'Developer community'
       ],
-      image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80'
+      image: financialDeveloper
     }
   ];
 
@@ -203,7 +207,7 @@ const FinancialSoftware = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-5 pt-4">
-                <a href="https://wa.me/263716409412">
+                <a href="tel:0782026070">
                   <button className="group relative px-8 py-5 bg-[#F5B700] text-[#0B3C5D] rounded-2xl font-bold text-lg overflow-hidden shadow-2xl hover:shadow-[#F5B700]/50 transition-all duration-300 hover:scale-105">
                     <span className="relative z-10 flex items-center justify-center">
                       Start Now
@@ -451,7 +455,7 @@ const FinancialSoftware = () => {
               <div className="relative">
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80" 
+                    src={financialApi} 
                     alt="API development"
                     className="w-full h-[500px] object-cover"
                   />
@@ -541,7 +545,7 @@ const FinancialSoftware = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="https://wa.me/263716409412">
+              <a href="tel:0782026070">
                 <button className="group px-10 py-5 bg-[#F5B700] text-[#0B3C5D] rounded-2xl font-bold text-xl hover:bg-[#F5B700]/90 transition-all duration-300 flex items-center justify-center shadow-2xl hover:shadow-3xl hover:scale-105">
                   Start Now
                   <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform" />

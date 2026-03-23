@@ -24,6 +24,7 @@ import {
   Play
 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
+import billProcess from '../assets/images/bill_process.png';
 
 const BillPayments = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -339,7 +340,7 @@ const BillPayments = () => {
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&q=80" 
+                  src={billProcess} 
                   alt="Mobile payment process"
                   className="w-full h-[500px] object-cover"
                 />
@@ -547,7 +548,7 @@ const BillPayments = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="https://wa.me/263716409412">
+              <a href="tel:0782026070">
                 <button className="group px-10 py-5 bg-[#F5B700] text-[#0B3C5D] rounded-2xl font-bold text-xl hover:bg-[#F5B700]/90 transition-all duration-300 flex items-center justify-center shadow-2xl hover:shadow-3xl hover:scale-105">
                   Get Started Now
                   <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform" />
