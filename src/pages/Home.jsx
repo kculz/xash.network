@@ -20,6 +20,10 @@ import {
   Layers
 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
+import heroMerchant from '../assets/images/hero_merchant.png';
+import posService from '../assets/images/pos_service.png';
+import billPayments from '../assets/images/bill_payments.png';
+import financialSoftware from '../assets/images/financial_software.png';
 
 const Home = () => {
   const services = [
@@ -29,7 +33,7 @@ const Home = () => {
       description: 'Advanced point-of-sale systems with seamless integration, multi-currency support, and real-time transaction tracking.',
       link: '/pos',
       gradient: 'from-[#0B3C5D] to-[#1F6AE1]',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80'
+      image: posService
     },
     {
       icon: Smartphone,
@@ -37,7 +41,7 @@ const Home = () => {
       description: 'Instant payments for electricity, DSTV, water, airtime, and mobile data bundles with 24/7 availability.',
       link: '/bill-payments',
       gradient: 'from-[#1F6AE1] to-[#0B3C5D]',
-      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80'
+      image: billPayments
     },
     {
       icon: BarChart3,
@@ -45,7 +49,7 @@ const Home = () => {
       description: 'Comprehensive accounting, reporting, and reconciliation tools designed for modern businesses.',
       link: '/financial-software',
       gradient: 'from-[#0B3C5D] to-[#1F6AE1]',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80'
+      image: financialSoftware
     }
   ];
 
@@ -143,7 +147,7 @@ const Home = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-5 pt-4">
-                <a href="https://wa.me/263716409412">
+                <a href="tel:0782026070">
                   <button className="group relative px-8 py-5 bg-[#F5B700] text-[#0B3C5D] rounded-2xl font-bold text-lg overflow-hidden shadow-2xl hover:shadow-[#F5B700]/50 transition-all duration-300 hover:scale-105">
                     <span className="relative z-10 flex items-center justify-center">
                       Get Started 
@@ -176,73 +180,39 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Right Content - Dashboard Preview */}
-            <div className="lg:col-span-5 relative">
-              {/* Main Dashboard Card */}
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-[#F5B700] to-[#1F6AE1] rounded-3xl opacity-30 blur-2xl animate-pulse"></div>
-                <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl p-6 border border-white/30 shadow-2xl">
-                  {/* Header */}
-                  <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/20">
-                    <div>
-                      <p className="text-sm text-gray-300">Total Revenue</p>
-                      <h3 className="text-3xl font-bold">$50M+</h3>
-                    </div>
-                    <div className="px-4 py-2 bg-green-500/20 text-green-400 rounded-xl text-sm font-bold border border-green-500/30">
-                      ↑ 24.5%
-                    </div>
-                  </div>
-
-                  {/* Stats Grid */}
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    {stats.slice(0, 4).map((stat, index) => (
-                      <div 
-                        key={index}
-                        className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10 hover:bg-white/10 transition-all"
-                      >
-                        <div className={`w-10 h-10 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center mb-3`}>
-                          <stat.icon className="w-5 h-5 text-white" />
-                        </div>
-                        <div className="text-2xl font-bold mb-1">{stat.value}</div>
-                        <div className="text-xs text-gray-400">{stat.label}</div>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Activity Bar */}
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-gray-300">Transaction Success</span>
-                      <span className="font-bold">99.9%</span>
-                    </div>
-                    <div className="h-2 bg-white/10 rounded-full overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-[#F5B700] to-[#1F6AE1] rounded-full" style={{width: '99.9%'}}></div>
-                    </div>
-                  </div>
-                </div>
+            {/* Right Content - Human Centric Image with Floating Badges */}
+            <div className="lg:col-span-5 relative group mt-12 lg:mt-0">
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#F5B700] to-[#1F6AE1] rounded-3xl opacity-30 blur-2xl group-hover:opacity-50 transition-opacity duration-500"></div>
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/20 aspect-[4/5] md:aspect-auto">
+                <img 
+                  src={heroMerchant} 
+                  alt="Smiling African Business Owner" 
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B3C5D]/40 via-transparent to-transparent"></div>
               </div>
 
-              {/* Floating Mini Cards */}
-              <div className="absolute -left-6 top-1/4 bg-white/10 backdrop-blur-xl rounded-2xl p-4 border border-white/30 shadow-xl hidden lg:block">
+              {/* Floating Stat Badges */}
+              <div className="absolute -left-6 top-1/4 bg-white/10 backdrop-blur-xl rounded-2xl p-4 border border-white/30 shadow-xl hidden lg:block hover:bg-white/20 transition-all cursor-pointer">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center">
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-xs text-gray-400">Verified</p>
-                    <p className="text-sm font-bold">Secure</p>
+                    <p className="text-xs text-gray-300">Verified</p>
+                    <p className="text-sm font-bold">99.9% Uptime</p>
                   </div>
                 </div>
               </div>
 
-              <div className="absolute -right-6 bottom-1/4 bg-white/10 backdrop-blur-xl rounded-2xl p-4 border border-white/30 shadow-xl hidden lg:block">
+              <div className="absolute -right-6 bottom-1/4 bg-white/10 backdrop-blur-xl rounded-2xl p-4 border border-white/30 shadow-xl hidden lg:block hover:bg-white/20 transition-all cursor-pointer">
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-[#F5B700] to-[#F5B700]/80 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#F5B700] to-[#F5B700]/80 rounded-2xl flex items-center justify-center">
                     <Zap className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-xs text-gray-400">Processing</p>
-                    <p className="text-sm font-bold">Instant</p>
+                    <p className="text-xs text-gray-300">Processing</p>
+                    <p className="text-sm font-bold">$50M+ Processed</p>
                   </div>
                 </div>
               </div>
@@ -528,7 +498,7 @@ const Home = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="https://wa.me/263716409412">
+              <a href="tel:0782026070">
                 <button className="group px-10 py-5 bg-[#F5B700] text-[#0B3C5D] rounded-2xl font-bold text-xl hover:bg-[#F5B700]/90 transition-all duration-300 flex items-center justify-center shadow-2xl hover:shadow-3xl hover:scale-105">
                   Get Started Now
                   <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform" />
