@@ -6,6 +6,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
   const [solutionsHovered, setSolutionsHovered] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const dropdownRef = useRef(null);
   const buttonRef = useRef(null);
 
@@ -22,6 +23,16 @@ const Header = () => {
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
+  }, []);
+
+  // Handle scroll for glassmorphism effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navItems = [
@@ -41,8 +52,8 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-100">
-      <div className="container mx-auto px-6 py-4">
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-xl border-b border-gray-200/50 py-3 shadow-sm' : 'bg-white/60 backdrop-blur-md py-5 border-b border-transparent'}`}>
+      <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
@@ -59,10 +70,11 @@ const Header = () => {
                       ref={buttonRef}
                       onMouseEnter={() => setSolutionsHovered(true)}
                       onMouseLeave={() => setSolutionsHovered(false)}
-                      className="flex items-center text-[#1A1A1A] hover:text-[#0B3C5D] transition-all duration-300 font-medium px-4 py-2.5 rounded-xl hover:bg-[#F5F7FA]"
+                      className="relative flex items-center text-[#1A1A1A] hover:text-[#0B3C5D] transition-colors duration-300 font-medium px-4 py-2 group"
                     >
                       {item.name}
                       <ChevronDown className={`ml-1.5 w-4 h-4 transition-transform duration-300 ${solutionsHovered ? 'rotate-180' : ''}`} />
+                      <span className="absolute bottom-0 left-4 right-4 h-[2px] bg-[#0B3C5D] transform scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100 rounded-full"></span>
                     </button>
                     <div 
                       ref={dropdownRef}
@@ -87,22 +99,32 @@ const Header = () => {
                 ) : (
                   <a
                     href={item.href}
-                    className="text-[#1A1A1A] hover:text-[#0B3C5D] transition-all duration-300 font-medium px-4 py-2.5 rounded-xl hover:bg-[#F5F7FA]"
+                    className="relative text-[#1A1A1A] hover:text-[#0B3C5D] transition-colors duration-300 font-medium px-4 py-2 group"
                   >
                     {item.name}
+                    <span className="absolute bottom-0 left-4 right-4 h-[2px] bg-[#0B3C5D] transform scale-x-0 origin-left transition-transform duration-300 ease-out group-hover:scale-x-100 rounded-full"></span>
                   </a>
                 )}
               </div>
             ))}
+            {/* CTA Button */}
+            <a href="tel:0782026070" className="hidden lg:flex items-center ml-4 px-6 py-2.5 bg-[#F5B700] text-[#0B3C5D] rounded-xl font-bold hover:shadow-lg hover:shadow-[#F5B700]/30 transition-all duration-300 hover:-translate-y-0.5">
+              Become an Agent
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-[#1A1A1A] hover:text-[#0B3C5D] transition-colors p-2 hover:bg-[#F5F7FA] rounded-xl"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="md:hidden flex items-center space-x-2">
+            <a href="tel:0782026070" className="px-4 py-2 bg-[#F5B700] text-[#0B3C5D] rounded-lg font-bold text-sm">
+              Join
+            </a>
+            <button
+              className="text-[#1A1A1A] hover:text-[#0B3C5D] transition-colors p-2 hover:bg-[#F5F7FA] rounded-xl"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}

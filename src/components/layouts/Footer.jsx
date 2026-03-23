@@ -36,10 +36,11 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-br from-[#0B3C5D] via-[#0B3C5D] to-[#1F6AE1] text-white overflow-hidden">
+    <footer className="relative bg-[#041A2B] text-white overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#1F6AE1] rounded-full opacity-10 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#F5B700] rounded-full opacity-5 blur-3xl"></div>
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMC41IiBvcGFjaXR5PSIwLjA1Ii8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-60"></div>
       
       <div className="container mx-auto px-6 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
@@ -52,11 +53,11 @@ const Footer = () => {
               Simplifying bill payments and POS solutions for businesses and individuals across the Globe.
             </p>
            <div className="space-y-4">
-              <a href="+263 77 922 2722" className="flex items-center space-x-3 group">
+              <a href="tel:0782026070" className="flex items-center space-x-3 group">
                 <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#F5B700]/20 transition-all">
                   <Phone className="w-4 h-4 text-[#F5B700]" />
                 </div>
-                <span className="text-gray-300 text-sm group-hover:text-[#F5B700] transition-colors">+263 77 922 2722</span>
+                <span className="text-gray-300 text-sm group-hover:text-[#F5B700] transition-colors">07 82026070</span>
               </a>
               <a href="mailto:info@xash.network" className="flex items-center space-x-3 group">
                 <div className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#F5B700]/20 transition-all">
@@ -69,9 +70,8 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-6 relative inline-block">
+            <h3 className="text-lg font-bold mb-6 text-white/90">
               Quick Links
-              <div className="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-[#F5B700] to-transparent rounded-full"></div>
             </h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
@@ -90,9 +90,8 @@ const Footer = () => {
 
           {/* Legal */}
           <div>
-            <h3 className="text-lg font-bold mb-6 relative inline-block">
+            <h3 className="text-lg font-bold mb-6 text-white/90">
               Legal
-              <div className="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-[#F5B700] to-transparent rounded-full"></div>
             </h3>
             <ul className="space-y-3">
               {legalLinks.map((link) => (
@@ -111,9 +110,8 @@ const Footer = () => {
 
           {/* Social & Trust */}
           <div>
-            <h3 className="text-lg font-bold mb-6 relative inline-block">
+            <h3 className="text-lg font-bold mb-6 text-white/90">
               Connect With Us
-              <div className="absolute -bottom-2 left-0 w-12 h-1 bg-gradient-to-r from-[#F5B700] to-transparent rounded-full"></div>
             </h3>
             <div className="flex space-x-3 mb-8">
               {socialLinks.map((social) => (
@@ -147,7 +145,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10">
+        <div className="pt-8 border-t border-white/5">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
               © {new Date().getFullYear()}Xash Solutions. All rights reserved.
