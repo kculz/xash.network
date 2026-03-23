@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { AnimatedSection } from '../components/ui/AnimatedSection';
 import { 
   BarChart3,
   Calculator,
@@ -176,7 +177,7 @@ const FinancialSoftware = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center bg-gradient-to-br from-[#0B3C5D] via-[#1F6AE1] to-[#0B3C5D] text-white overflow-hidden">
+      <AnimatedSection as="section" className="relative min-h-screen flex items-center bg-gradient-to-br from-[#0B3C5D] via-[#1F6AE1] to-[#0B3C5D] text-white overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 right-10 w-[600px] h-[600px] bg-[#F5B700] rounded-full opacity-20 blur-3xl animate-pulse"></div>
@@ -296,10 +297,10 @@ const FinancialSoftware = () => {
             <path d="M0,64 C360,100 720,40 1080,70 C1440,100 1440,120 1440,120 L0,120 Z" fill="#F5F7FA"/>
           </svg>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Features Section */}
-      <section className="py-24 bg-[#F5F7FA] relative">
+      <AnimatedSection as="section" className="py-24 bg-[#F5F7FA] relative">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <div className="inline-flex items-center bg-gradient-to-r from-[#0B3C5D] to-[#1F6AE1] text-white px-6 py-2.5 rounded-full mb-6 shadow-lg">
@@ -325,10 +326,10 @@ const FinancialSoftware = () => {
             ))}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Benefits Section */}
-      <section className="py-24 bg-white">
+      <AnimatedSection as="section" className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <div className="inline-flex items-center bg-gradient-to-r from-[#0B3C5D] to-[#1F6AE1] text-white px-6 py-2.5 rounded-full mb-6 shadow-lg">
@@ -376,10 +377,10 @@ const FinancialSoftware = () => {
             ))}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* Security & Compliance */}
-      <section className="py-24 bg-[#F5F7FA]">
+      <AnimatedSection as="section" className="py-24 bg-[#F5F7FA]">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <div className="inline-flex items-center bg-gradient-to-r from-[#0B3C5D] to-[#1F6AE1] text-white px-6 py-2.5 rounded-full mb-6 shadow-lg">
@@ -413,10 +414,10 @@ const FinancialSoftware = () => {
             ))}
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* API Integration Showcase */}
-      <section className="py-24 bg-white">
+      <AnimatedSection as="section" className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -482,10 +483,10 @@ const FinancialSoftware = () => {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* FAQ */}
-      <section className="py-24 bg-[#F5F7FA]">
+      <AnimatedSection as="section" className="py-24 bg-[#F5F7FA]">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-20">
@@ -521,10 +522,10 @@ const FinancialSoftware = () => {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       {/* CTA Section */}
-      <section className="relative py-28 overflow-hidden">
+      <AnimatedSection as="section" className="relative py-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0B3C5D] via-[#0B3C5D] to-[#1F6AE1]">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-0 w-96 h-96 bg-[#F5B700] rounded-full blur-3xl animate-pulse"></div>
@@ -555,7 +556,7 @@ const FinancialSoftware = () => {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
     </div>
   );
 };
