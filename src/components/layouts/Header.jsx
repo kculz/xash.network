@@ -56,9 +56,9 @@ const Header = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <a href="/" className="flex items-center space-x-3 hover:opacity-90 transition-opacity">
             <img src={logo} alt="Xash Logo" className='w-20' />
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1">
@@ -82,7 +82,7 @@ const Header = () => {
                       onMouseLeave={() => setSolutionsHovered(false)}
                       className={`absolute left-0 mt-2 w-72 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-300 ${solutionsHovered ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
                     >
-                      {item.dropdown.map((subItem, index) => (
+                      {item.dropdown.map((subItem) => (
                         <a
                           key={subItem.name}
                           href={subItem.href}

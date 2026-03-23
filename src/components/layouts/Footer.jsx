@@ -17,7 +17,15 @@ import logo from "../../assets/logos/logo.png";
 const Footer = () => {
   const quickLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Solutions', href: '/solutions' },
+    { 
+      name: 'Solutions', 
+      href: '#',
+      dropdown: [
+        { name: 'POS Software', href: '/pos' },
+        { name: 'Bill Payments', href: '/bill-payments' },
+        { name: 'Financial Software', href: '/financial-software' },
+      ]
+    },
     { name: 'How It Works', href: '/how-it-works' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
@@ -76,13 +84,34 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-gray-300 hover:text-[#F5B700] transition-all text-sm flex items-center group"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-                    {link.name}
-                  </a>
+                  {link.dropdown ? (
+                    <details className="group">
+                      <summary className="text-gray-300 hover:text-[#F5B700] transition-all text-sm flex items-center cursor-pointer list-none">
+                        <ArrowRight className="w-3 h-3 mr-2 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                        {link.name}
+                        <svg className="w-4 h-4 ml-auto opacity-50 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </summary>
+                      <ul className="pl-4 mt-3 space-y-3 mb-2 border-l border-white/10 ml-[10px]">
+                        {link.dropdown.map(sublink => (
+                          <li key={sublink.name}>
+                            <a href={sublink.href} className="text-gray-400 hover:text-[#F5B700] transition-all text-sm block">
+                              {sublink.name}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </details>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="text-gray-300 hover:text-[#F5B700] transition-all text-sm flex items-center group"
+                    >
+                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                      {link.name}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
