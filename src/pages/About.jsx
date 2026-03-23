@@ -26,6 +26,9 @@ import {
   Flag
 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
+import aboutTeam from '../assets/images/about_team.png';
+import aboutMission from '../assets/images/about_mission.png';
+import aboutVision from '../assets/images/about_vision.png';
 
 const About = () => {
   const values = [
@@ -158,7 +161,7 @@ const About = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-5 pt-4">
-                <a href="https://wa.me/263716409412">
+                <a href="tel:0782026070">
                   <button className="group relative px-8 py-5 bg-[#F5B700] text-[#0B3C5D] rounded-2xl font-bold text-lg overflow-hidden shadow-2xl hover:shadow-[#F5B700]/50 transition-all duration-300 hover:scale-105">
                     <span className="relative z-10 flex items-center justify-center">
                       Become an Agent
@@ -166,7 +169,7 @@ const About = () => {
                     </span>
                   </button>
                 </a>
-                  <a href="https://wa.me/263716409412">
+                  <a href="tel:0782026070">
                     <button className="px-8 py-5 bg-white/10 backdrop-blur-lg border-2 border-white/40 text-white rounded-2xl font-bold text-lg hover:bg-white/20 hover:border-white/60 transition-all duration-300 flex items-center justify-center">
                       Partner With Us
                     </button>
@@ -199,7 +202,7 @@ const About = () => {
                 <div className="absolute -inset-4 bg-gradient-to-r from-[#F5B700] to-[#1F6AE1] rounded-3xl opacity-30 blur-2xl animate-pulse"></div>
                 <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/30 shadow-2xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=800&fit=crop" 
+                    src={aboutTeam} 
                     alt="Team collaboration" 
                     className="w-full h-[400px] object-cover"
                   />
@@ -241,7 +244,7 @@ const About = () => {
               <div className="relative">
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop" 
+                    src={aboutMission} 
                     alt="Team collaboration"
                     className="w-full h-[500px] object-cover"
                   />
@@ -280,7 +283,7 @@ const About = () => {
               <div className="lg:order-2 relative">
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=600&fit=crop" 
+                    src={aboutVision} 
                     alt="Business growth"
                     className="w-full h-[500px] object-cover"
                   />
@@ -417,7 +420,7 @@ const About = () => {
                 <div className="space-y-6 mb-10">
                   {[
                     { icon: MapPin, title: 'Address', content: '63 Embassy Building, Aerodrome Rd\nMutare, Zimbabwe' },
-                    { icon: Phone, title: 'Phone', content: '+263 77 922 2722' },
+                    { icon: Phone, title: 'Phone', content: '07 82026070' },
                     { icon: Mail, title: 'Email', content: 'info@xash.network' }
                   ].map((item, index) => (
                     <div key={index} className="flex items-start group">
@@ -480,13 +483,13 @@ const About = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="https://wa.me/263716409412">
+              <a href="tel:0782026070">
                 <button className="group px-10 py-5 bg-[#F5B700] text-[#0B3C5D] rounded-2xl font-bold text-xl hover:bg-[#F5B700]/90 transition-all duration-300 flex items-center justify-center shadow-2xl hover:shadow-3xl hover:scale-105">
                   Become an Agent
                   <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform" />
                 </button>
               </a>
-              <a href="https://wa.me/263716409412">
+              <a href="tel:0782026070">
                 <button className="px-10 py-5 bg-white/10 backdrop-blur-lg border-2 border-white/30 text-white rounded-2xl font-bold text-xl hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   Partner With Us
                 </button>

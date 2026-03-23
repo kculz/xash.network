@@ -15,6 +15,11 @@ import {
   Shield,
   Award
 } from 'lucide-react';
+import aboutTeam from '../assets/images/about_team.png';
+import financialEnterprise from '../assets/images/financial_enterprise.png';
+import financialDeveloper from '../assets/images/financial_developer.png';
+import aboutMission from '../assets/images/about_mission.png';
+import testimonialTendai from '../assets/images/testimonial_tendai.png';
 
 const Contact = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -23,9 +28,9 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone Support',
-      details: '+263 77 922 2722',
+      details: '07 82026070',
       description: 'Mon-Fri: 8AM-5PM',
-      link: '+263 77 922 2722',
+      link: 'tel:0782026070',
       gradient: 'from-[#0B3C5D] to-[#1F6AE1]'
     },
     {
@@ -39,9 +44,9 @@ const Contact = () => {
     {
       icon: MessageCircle,
       title: 'WhatsApp',
-      details: '+263 71 640 9412',
+      details: '07 82026070',
       description: '24/7 instant messaging',
-      link: 'https://wa.me/263716409412',
+      link: 'tel:0782026070',
       gradient: 'from-[#0B3C5D] to-[#1F6AE1]'
     }
   ];
@@ -105,7 +110,7 @@ const Contact = () => {
                     <Send className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
                   </span>
                 </a>
-                <a href="+263 77 922 2722" className="px-8 py-5 bg-white/10 backdrop-blur-lg border-2 border-white/40 text-white rounded-2xl font-bold text-lg hover:bg-white/20 hover:border-white/60 transition-all duration-300 flex items-center justify-center">
+                <a href="tel:0782026070" className="px-8 py-5 bg-white/10 backdrop-blur-lg border-2 border-white/40 text-white rounded-2xl font-bold text-lg hover:bg-white/20 hover:border-white/60 transition-all duration-300 flex items-center justify-center">
                   Call Us
                 </a>
               </div>
@@ -136,7 +141,7 @@ const Contact = () => {
                 <div className="absolute -inset-4 bg-gradient-to-r from-[#F5B700] to-[#1F6AE1] rounded-3xl opacity-30 blur-2xl animate-pulse"></div>
                 <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/30 shadow-2xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=800&h=600&fit=crop" 
+                    src={aboutTeam} 
                     alt="Customer support team"
                     className="w-full h-[400px] object-cover"
                   />
@@ -223,7 +228,7 @@ const Contact = () => {
               <div className="space-y-6">
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=400&fit=crop" 
+                    src={financialEnterprise} 
                     alt="Office interior"
                     className="w-full h-80 object-cover"
                   />
@@ -232,7 +237,7 @@ const Contact = () => {
                 <div className="grid grid-cols-2 gap-6">
                   <div className="relative rounded-2xl overflow-hidden shadow-lg">
                     <img 
-                      src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=400&h=300&fit=crop" 
+                      src={financialDeveloper} 
                       alt="Team workspace"
                       className="w-full h-56 object-cover"
                     />
@@ -240,7 +245,7 @@ const Contact = () => {
                   </div>
                   <div className="relative rounded-2xl overflow-hidden shadow-lg">
                     <img 
-                      src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=300&fit=crop" 
+                      src={aboutMission} 
                       alt="Office building"
                       className="w-full h-56 object-cover"
                     />
@@ -256,7 +261,7 @@ const Contact = () => {
                 <div className="space-y-6 mb-10">
                   {[
                     { icon: MapPin, title: 'Address', content: '63 Embassy Building, Aerodrome Rd\nMutare, Zimbabwe' },
-                    { icon: Phone, title: 'Phone', content: '+263 77 922 2722', link: '+263 77 922 2722' },
+                    { icon: Phone, title: 'Phone', content: '07 82026070', link: 'tel:0782026070' },
                     { icon: Mail, title: 'Email', content: 'info@xash.network', link: 'mailto:info@xash.network' }
                   ].map((item, index) => (
                     <div key={index} className="flex items-start group">
@@ -321,7 +326,7 @@ const Contact = () => {
               <div className="lg:order-2 relative">
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=800&h=600&fit=crop" 
+                    src={testimonialTendai} 
                     alt="Support team"
                     className="w-full h-[500px] object-cover"
                   />
@@ -428,7 +433,7 @@ const Contact = () => {
                 Contact Sales
                 <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform" />
               </a>
-              <a href="+263 77 922 2722" className="px-10 py-5 bg-white/10 backdrop-blur-lg border-2 border-white/30 text-white rounded-2xl font-bold text-xl hover:bg-white/20 transition-all duration-300 hover:scale-105">
+              <a href="tel:0782026070" className="px-10 py-5 bg-white/10 backdrop-blur-lg border-2 border-white/30 text-white rounded-2xl font-bold text-xl hover:bg-white/20 transition-all duration-300 hover:scale-105">
                 Call Now
               </a>
             </div>
