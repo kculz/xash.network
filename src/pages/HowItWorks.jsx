@@ -18,6 +18,12 @@ import {
   Zap
 } from 'lucide-react';
 import { Helmet } from 'react-helmet';
+import posRetail from '../assets/images/pos_retail.png';
+import billProcess from '../assets/images/bill_process.png';
+import financialEnterprise from '../assets/images/financial_enterprise.png';
+import heroMerchant from '../assets/images/hero_merchant.png';
+import financialSmallBusiness from '../assets/images/financial_small_business.png';
+import posMobile from '../assets/images/pos_mobile.png';
 
 const HowItWorks = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -27,7 +33,7 @@ const HowItWorks = () => {
       icon: CreditCard,
       title: 'POS Solutions',
       gradient: 'from-[#0B3C5D] to-[#1F6AE1]',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80',
+      image: posRetail,
       steps: [
         { num: '01', title: 'Sign Up & Register', desc: 'Create your merchant account and complete verification' },
         { num: '02', title: 'Hardware Setup', desc: 'Get your POS device or install our mobile app' },
@@ -39,7 +45,7 @@ const HowItWorks = () => {
       icon: Smartphone,
       title: 'Bill Payments',
       gradient: 'from-[#1F6AE1] to-[#0B3C5D]',
-      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&q=80',
+      image: billProcess,
       steps: [
         { num: '01', title: 'Customer Identification', desc: 'Customer provides bill details or account number' },
         { num: '02', title: 'Payment Processing', desc: 'Select payment method and complete transaction' },
@@ -51,7 +57,7 @@ const HowItWorks = () => {
       icon: BarChart3,
       title: 'Financial Software',
       gradient: 'from-[#0B3C5D] to-[#1F6AE1]',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+      image: financialEnterprise,
       steps: [
         { num: '01', title: 'System Assessment', desc: 'Evaluate your current financial processes' },
         { num: '02', title: 'Setup & Integration', desc: 'Configure software and integrate with systems' },
@@ -71,7 +77,7 @@ const HowItWorks = () => {
         'Real-time commission tracking',
         'Comprehensive training'
       ],
-      image: 'https://images.unsplash.com/photo-1556740758-90de374c12ad?w=800&q=80'
+      image: heroMerchant
     },
     {
       title: 'For Business Users',
@@ -82,7 +88,7 @@ const HowItWorks = () => {
         'Real-time reporting',
         'API integration'
       ],
-      image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80'
+      image: financialSmallBusiness
     },
     {
       title: 'For End Customers',
@@ -93,7 +99,7 @@ const HowItWorks = () => {
         'Digital receipts',
         'Secure transactions'
       ],
-      image: 'https://images.unsplash.com/photo-1556742393-d75f468bfcb0?w=800&q=80'
+      image: posMobile
     }
   ];
 
@@ -142,34 +148,49 @@ const HowItWorks = () => {
         </div>
 
         <div className="container mx-auto px-6 py-20 relative z-10">
-          <div className="max-w-5xl mx-auto text-center space-y-8">
-            <div className="inline-flex items-center bg-white/15 backdrop-blur-md px-5 py-3 rounded-full border border-[#F5B700]/50 hover:bg-white/20 transition-all duration-300">
-              <div className="w-2 h-2 bg-[#F5B700] rounded-full mr-3 animate-pulse"></div>
-              <Sparkles className="w-4 h-4 text-[#F5B700] mr-2" />
-              <span className="text-sm font-bold">Simple, Transparent Processes</span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left Content */}
+            <div className="lg:col-span-7 space-y-8">
+              <div className="inline-flex items-center bg-white/15 backdrop-blur-md px-5 py-3 rounded-full border border-[#F5B700]/50 hover:bg-white/20 transition-all duration-300">
+                <div className="w-2 h-2 bg-[#F5B700] rounded-full mr-3 animate-pulse"></div>
+                <Sparkles className="w-4 h-4 text-[#F5B700] mr-2" />
+                <span className="text-sm font-bold">Simple, Transparent Processes</span>
+              </div>
+
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1]">
+                <span className="block">How It</span>
+                <span className="block bg-gradient-to-r from-[#F5B700] via-[#F5B700] to-[#FFF] bg-clip-text text-transparent mt-2">
+                  Works
+                </span>
+              </h1>
+
+              <p className="text-xl md:text-2xl text-gray-200 max-w-2xl leading-relaxed">
+                Simple, transparent processes for all our financial solutions. Get started quickly and start earning or saving today.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-5 pt-6">
+                <a href="tel:0782026070">
+                <button className="group relative px-8 py-5 bg-[#F5B700] text-[#0B3C5D] rounded-2xl font-bold text-lg overflow-hidden shadow-2xl hover:shadow-[#F5B700]/50 transition-all duration-300 hover:scale-105">
+                  <span className="relative z-10 flex items-center justify-center">
+                    Get Started Now
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
+                  </span>
+                </button>
+                </a>
+              </div>
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1]">
-              <span className="block">How It</span>
-              <span className="block bg-gradient-to-r from-[#F5B700] via-[#F5B700] to-[#FFF] bg-clip-text text-transparent mt-2">
-                Works
-              </span>
-            </h1>
-
-            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
-              Simple, transparent processes for all our financial solutions. Get started quickly and start earning or saving today.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-5 justify-center pt-6">
-              <a href="https://wa.me/264716409412">
-              <button className="group relative px-8 py-5 bg-[#F5B700] text-[#0B3C5D] rounded-2xl font-bold text-lg overflow-hidden shadow-2xl hover:shadow-[#F5B700]/50 transition-all duration-300 hover:scale-105">
-                <span className="relative z-10 flex items-center justify-center">
-                  Get Started Now
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
-                </span>
-              </button>
-              </a>
-              
+            {/* Right Content - Hero Image */}
+            <div className="lg:col-span-5 relative group mt-12 lg:mt-0">
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#F5B700] to-[#1F6AE1] rounded-3xl opacity-30 blur-2xl group-hover:opacity-50 transition-opacity duration-500"></div>
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/20 aspect-[4/5] md:aspect-auto">
+                <img 
+                  src={posMobile} 
+                  alt="Customer using mobile app" 
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B3C5D]/40 via-transparent to-transparent"></div>
+              </div>
             </div>
           </div>
         </div>
